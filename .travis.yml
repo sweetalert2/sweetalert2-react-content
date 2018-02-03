@@ -1,0 +1,14 @@
+language: node_js
+dist: trusty
+node_js: 8.9
+sudo: true
+
+addons:
+  google-chrome: latest
+
+script:
+  - xvfb-run npm test
+
+notifications:
+  email:
+    on_success: never

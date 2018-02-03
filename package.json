@@ -1,0 +1,52 @@
+{
+  "name": "sweetalert2-react-content",
+  "version": "0.0.1",
+  "repository": "zenflow/sweetalert2-react-content",
+  "description": "sweetalert2 decorator adding support for React elements as content",
+  "main": "lib/sweetalert2-react-content.js",
+  "files": [
+    "lib/**"
+  ],
+  "scripts": {
+    "start": "karma start karma.conf.js",
+    "fix": "standard --fix",
+    "test": "npm run test:linting && npm run test:units",
+    "test:linting": "standard",
+    "test:units": "karma start karma.conf.js --single-run"
+  },
+  "keywords": [
+    "sweetalert",
+    "sweetalert2",
+    "react",
+    "content"
+  ],
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sweetalert2": "^7.9.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "jasmine": "^3.0.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^2.0.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "standard": "^10.0.3",
+    "sweetalert2": "^7.9.2",
+    "webpack": "^3.11.0"
+  }
+}
