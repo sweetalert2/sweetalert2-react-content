@@ -12,7 +12,7 @@
     "fix": "standard --fix",
     "test": "npm run test:linting && npm run test:units",
     "test:linting": "standard",
-    "test:units": "karma start karma.conf.js --single-run"
+    "test:units": "karma start karma.conf.js --single-run --report-coverage"
   },
   "keywords": [
     "sweetalert",
@@ -33,12 +33,15 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^4.1.5",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.0",
     "jasmine": "^3.0.0",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.32",

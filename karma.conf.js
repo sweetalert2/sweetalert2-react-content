@@ -1,5 +1,7 @@
 const webpack = require('webpack')
 
+const reportCoverage = process.argv.includes('--report-coverage')
+
 module.exports = config => {
   config.set({
     files: [
@@ -9,10 +11,16 @@ module.exports = config => {
     browsers: [
       'Chrome'
     ],
-    reporters: ['spec'],
+    reporters: [
+      'spec',
+      ...(reportCoverage ? ['coverage'] : [])
+    ],
     frameworks: ['jasmine'],
     preprocessors: {
-      '{lib,tests}/**/*.js': ['webpack', 'sourcemap']
+      '{lib,tests}/**/*.js': [
+        'webpack',
+        'sourcemap'
+      ]
     },
     webpack: {
       devtool: 'inline-source-map',
@@ -23,7 +31,9 @@ module.exports = config => {
             exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
-              options: {/* babel options */}
+              options: {
+                plugins: reportCoverage ? [['istanbul', {include: ['lib/**/*.js']}]] : []
+              }
             }
           }
         ]
@@ -38,9 +48,15 @@ module.exports = config => {
       stats: 'errors-only',
       noInfo: true
     },
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/',
+      subdir: './'
+    },
     plugins: [
       'karma-chrome-launcher',
       'karma-spec-reporter',
+      'karma-coverage',
       'karma-jasmine',
       'karma-webpack',
       'karma-sourcemap-loader'
