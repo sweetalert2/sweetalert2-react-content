@@ -65,7 +65,7 @@
     "react-dom": "^16.2.0",
     "sweetalert2": "^7.12.16",
     "webpack": "^3.11.0",
-    "webpack-serve": "github:zenflow/webpack-serve#fix-no-hot"
+    "webpack-serve": "0.1.x"
   },
   "eslintConfig": {
     "extends": [
