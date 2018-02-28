@@ -6,12 +6,9 @@
   - remove `require('react')`
   - remove `require('react-dom')` in favor of passing in via a closure
 - Workflow
-  - use webpack dev server
-  - include (active) linting in `npm start` script (webpack dev server "overlay"?)
-  - eslint + eslint-plugin-prettier
+  - enable greenkeeper
   - semantic-release
 - Tests
-  - add test coverage
-  - add snapshot testing
+  - improve test coverage
 
 (also search "TODO" in code)

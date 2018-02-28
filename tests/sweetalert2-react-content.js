@@ -1,6 +1,5 @@
-/* global describe, expect */
-const {asyncIt} = require('./support/asyncIt')
-const {cleanSwalState, swal} = require('./support/swal')
+const { asyncIt } = require('./support/asyncIt')
+const { cleanSwalState, swal } = require('./support/swal')
 const withReact = require('../lib/sweetalert2-react-content')
 
 describe('sweetalert2-react-content', () => {
@@ -13,9 +12,11 @@ describe('sweetalert2-react-content', () => {
       title: <span>react content</span>,
       onOpen: () => {
         expect(mySwal.isVisible()).toBe(true)
-        expect(global.document.body.querySelector('.swal2-title').innerHTML).toEqual('<span>react content</span>')
+        expect(
+          global.document.body.querySelector('.swal2-title').innerHTML,
+        ).toEqual('<span>react content</span>')
         mySwal.clickConfirm()
-      }
+      },
     })
     expect(mySwal.isVisible()).toBe(false)
   })

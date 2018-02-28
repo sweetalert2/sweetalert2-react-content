@@ -1,26 +1,17 @@
+/* eslint-env node */
+
 const webpack = require('webpack')
 
 const reportCoverage = process.argv.includes('--report-coverage')
 
 module.exports = config => {
   config.set({
-    files: [
-      'node_modules/babel-polyfill/dist/polyfill.min.js',
-      'tests/*.js'
-    ],
-    browsers: [
-      'Chrome'
-    ],
-    reporters: [
-      'spec',
-      ...(reportCoverage ? ['coverage'] : [])
-    ],
+    files: ['node_modules/babel-polyfill/dist/polyfill.min.js', 'tests/*.js'],
+    browsers: ['Chrome'],
+    reporters: ['spec', ...(reportCoverage ? ['coverage'] : [])],
     frameworks: ['jasmine'],
     preprocessors: {
-      '{lib,tests}/**/*.js': [
-        'webpack',
-        'sourcemap'
-      ]
+      '{lib,tests}/**/*.js': ['webpack', 'sourcemap'],
     },
     webpack: {
       devtool: 'inline-source-map',
@@ -32,26 +23,28 @@ module.exports = config => {
             use: {
               loader: 'babel-loader',
               options: {
-                plugins: reportCoverage ? [['istanbul', {include: ['lib/**/*.js']}]] : []
-              }
-            }
-          }
-        ]
+                plugins: reportCoverage
+                  ? [['istanbul', { include: ['lib/**/*.js'] }]]
+                  : [],
+              },
+            },
+          },
+        ],
       },
       plugins: [
         new webpack.ProvidePlugin({
-          'React': 'react'
-        })
-      ]
+          React: 'react',
+        }),
+      ],
     },
     webpackMiddleware: {
       stats: 'errors-only',
-      noInfo: true
+      noInfo: true,
     },
     coverageReporter: {
       type: 'lcov',
       dir: 'coverage/',
-      subdir: './'
+      subdir: './',
     },
     plugins: [
       'karma-chrome-launcher',
@@ -59,7 +52,7 @@ module.exports = config => {
       'karma-coverage',
       'karma-jasmine',
       'karma-webpack',
-      'karma-sourcemap-loader'
-    ]
+      'karma-sourcemap-loader',
+    ],
   })
 }

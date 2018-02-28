@@ -1,17 +1,9 @@
 language: node_js
-dist: trusty
-node_js: 8.9
+node_js: node
 sudo: true
-
 addons:
   google-chrome: latest
-
 script:
   - xvfb-run npm test
-
 after_script:
   - cat ./coverage/lcov.info | coveralls
-
-notifications:
-  email:
-    on_success: never
