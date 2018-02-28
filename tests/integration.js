@@ -4,16 +4,15 @@ const { cleanSwalState, swal, initialSwalProps } = require('./support/swal')
 describe('integration', () => {
   asyncIt('`swal` properties are consistent ', async () => {
     await cleanSwalState()
-    const assertConsistent = () =>
-      expect(Object.keys(swal)).toEqual(initialSwalProps)
-    assertConsistent()
+
+    expect(Object.keys(swal)).toEqual(initialSwalProps)
     await swal({
       title: 'test',
       onOpen: () => {
-        assertConsistent()
+        expect(Object.keys(swal)).toEqual(initialSwalProps)
         swal.clickConfirm()
       },
     })
-    assertConsistent()
+    expect(Object.keys(swal)).toEqual(initialSwalProps)
   })
 })
