@@ -1,5 +1,6 @@
+const swal = require('sweetalert2')
 const { asyncIt } = require('./support/asyncIt')
-const { cleanSwalState, swal } = require('./support/swal')
+const { cleanSwalState } = require('./support/cleanSwalState')
 const withReact = require('../lib/sweetalert2-react-content')
 
 describe('sweetalert2-react-content', () => {

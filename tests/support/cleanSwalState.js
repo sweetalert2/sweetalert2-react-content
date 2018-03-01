@@ -1,7 +1,5 @@
 const swal = require('sweetalert2')
 
-const initialSwalProps = Object.keys(swal)
-
 async function cleanSwalState() {
   swal.resetDefaults()
   await swal({
@@ -11,8 +9,4 @@ async function cleanSwalState() {
   })
 }
 
-module.exports = {
-  swal,
-  initialSwalProps,
-  cleanSwalState,
-}
+module.exports = { cleanSwalState }

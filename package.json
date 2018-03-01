@@ -63,7 +63,7 @@
     "react": "^16.2.0",
     "react-dev-utils": "^5.0.0",
     "react-dom": "^16.2.0",
-    "sweetalert2": "^7.12.16",
+    "sweetalert2": "^7.13.0",
     "webpack": "^3.11.0",
     "webpack-serve": "0.1.x"
   },
