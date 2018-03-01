@@ -17,8 +17,8 @@ The following options can be React elements:
 ## Example
 
 ```jsx
-const swal = 'sweetalert2')
-const withReactContent = 'sweetalert2-react-content'
+const swal = require('sweetalert2')
+const withReactContent = require('sweetalert2-react-content')
 
 const mySwal = withReactContent(swal)
 // or const mySwal = withReactContent(swal, require('react-dom'))
