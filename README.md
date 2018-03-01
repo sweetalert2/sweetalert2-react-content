@@ -3,6 +3,7 @@ Dynamic content in SweetAlert2, the React way
 
 [![Build Status](https://travis-ci.org/zenflow/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/zenflow/sweetalert2-react-content)
 [![Coverage Status](https://coveralls.io/repos/github/zenflow/sweetalert2-react-content/badge.svg?branch=master)](https://coveralls.io/github/zenflow/sweetalert2-react-content?branch=master)
+[![npm version](https://badge.fury.io/js/sweetalert2-react-content.svg)](https://www.npmjs.com/packages/sweetalert2-react-content)
 
 `sweetalert2-react-content` is a sweetalert2 decorator adding support for React elements as content.
 
