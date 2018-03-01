@@ -1,12 +1,13 @@
-const swal = require('sweetalert2')
 const { asyncIt } = require('./support/asyncIt')
 const { cleanSwalState } = require('./support/cleanSwalState')
-const withReact = require('../lib/sweetalert2-react-content')
+
+const swal = require('sweetalert2')
+const withReactContent = require('../lib/sweetalert2-react-content')
 
 describe('sweetalert2-react-content', () => {
   asyncIt('basic usage', async () => {
     await cleanSwalState()
-    const mySwal = withReact(swal)
+    const mySwal = withReactContent(swal)
     expect(mySwal.isVisible()).toBe(false)
     await mySwal({
       animation: false,
@@ -22,7 +23,7 @@ describe('sweetalert2-react-content', () => {
     expect(mySwal.isVisible()).toBe(false)
   })
   asyncIt('returns a function with the same props as swal', async () => {
-    const mySwal = withReact(swal)
+    const mySwal = withReactContent(swal)
     expect(Object.keys(mySwal)).toEqual(Object.keys(swal))
   })
 })
