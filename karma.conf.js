@@ -1,8 +1,6 @@
 /* eslint-env node */
-
-const webpack = require('webpack')
-
-const reportCoverage = process.argv.includes('--report-coverage')
+const webpackTestsConfig = require('./webpack.config.tests')
+const { reportCoverage } = require('./tests/support/cliFlags')
 
 module.exports = config => {
   config.set({
@@ -13,30 +11,7 @@ module.exports = config => {
     preprocessors: {
       '{lib,tests}/**/*.js': ['webpack', 'sourcemap'],
     },
-    webpack: {
-      devtool: 'inline-source-map',
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                plugins: reportCoverage
-                  ? [['istanbul', { include: ['lib/**/*.js'] }]]
-                  : [],
-              },
-            },
-          },
-        ],
-      },
-      plugins: [
-        new webpack.ProvidePlugin({
-          React: 'react',
-        }),
-      ],
-    },
+    webpack: webpackTestsConfig,
     webpackMiddleware: {
       stats: 'errors-only',
       noInfo: true,

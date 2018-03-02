@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "dev:tests": "karma start karma.conf.js",
-    "dev:sandbox": "webpack-serve sandbox/webpack.config.js --no-hot --no-reload --open",
+    "dev:sandbox": "webpack-serve webpack.config.sandbox.js --no-hot --no-reload --open",
     "fix": "eslint . --fix",
     "lint": "eslint .",
     "test-only": "karma start karma.conf.js --single-run --report-coverage",
