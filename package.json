@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-react-content",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": "zenflow/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
   "main": "dist/main.bundle.js",
