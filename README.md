@@ -24,7 +24,7 @@ The following options can be React elements:
 const swal = require('sweetalert2')
 const withReactContent = require('sweetalert2-react-content')
 
-const mySwal = withReactContent({ swal })
+const mySwal = withReactContent(swal)
 // or just `const mySwal = withReactContent()`
 
 mySwal({

@@ -66,7 +66,7 @@ describe('sweetalert2-react-content', () => {
       return { value: 'bar' }
     }
     Object.assign(mockSwal, swal)
-    const mySwal = withReactContent({ swal: mockSwal })
+    const mySwal = withReactContent(mockSwal)
     const result = await mySwal({ title: 'foo' })
     expect(result).toEqual({ value: 'bar' })
   })
