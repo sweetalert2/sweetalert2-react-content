@@ -1,5 +1,5 @@
 import swal from 'sweetalert2'
-import withReactContent from '../lib/main'
+import withReactContent from '../src/main'
 import { StatefulElement } from './StatefulElement'
 
 main().catch(console.error)

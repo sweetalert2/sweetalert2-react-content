@@ -12,7 +12,7 @@ module.exports = config => {
     reporters: ['spec', ...(reportCoverage ? ['coverage'] : [])],
     frameworks: ['jasmine'],
     preprocessors: {
-      '{lib,tests}/**/*.js': ['webpack', 'sourcemap'],
+      '{src,tests}/**/*.js': ['webpack', 'sourcemap'],
     },
     webpack: webpackTestsConfig,
     webpackMiddleware: {

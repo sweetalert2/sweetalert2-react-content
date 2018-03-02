@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
-  entry: [require.resolve('./lib/main')],
+  entry: [require.resolve('./src/main')],
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',

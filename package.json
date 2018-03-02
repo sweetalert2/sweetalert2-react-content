@@ -4,7 +4,7 @@
   "repository": "zenflow/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
   "main": "dist/main.bundle.js",
-  "jsnext:main": "lib/main.js",
+  "jsnext:main": "src/main.js",
   "files": [
     "dist/**"
   ],

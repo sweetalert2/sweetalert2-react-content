@@ -14,7 +14,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             plugins: reportCoverage
-              ? [['istanbul', { include: ['lib/**/*.js'] }]]
+              ? [['istanbul', { include: ['src/**/*.js'] }]]
               : [],
           },
         },

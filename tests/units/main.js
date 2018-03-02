@@ -3,7 +3,7 @@ const { cleanSwalState } = require('../support/cleanSwalState')
 const { timeout } = require('../support/timeout')
 
 const swal = require('sweetalert2')
-const withReactContent = require('../../lib/main')
+const withReactContent = require('../../src/main')
 
 describe('sweetalert2-react-content', () => {
   asyncIt('renders React elements for each supported option', async () => {
