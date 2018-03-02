@@ -4,7 +4,10 @@ const { reportCoverage } = require('./tests/support/cliFlags')
 
 module.exports = config => {
   config.set({
-    files: ['node_modules/babel-polyfill/dist/polyfill.min.js', 'tests/*.js'],
+    files: [
+      'node_modules/babel-polyfill/dist/polyfill.min.js',
+      'tests/units/**/*.js',
+    ],
     browsers: ['Chrome'],
     reporters: ['spec', ...(reportCoverage ? ['coverage'] : [])],
     frameworks: ['jasmine'],

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script src="../node_modules/react/umd/react.production.min.js"></script>
+  <script src="../node_modules/react-dom/umd/react-dom.production.min.js"></script>
+  <script src="../dist/main.bundle.js"></script>
+</head>
+<body>
+<script>
+  mySwal = sweetalert2ReactContent(swal)
+  Promise.resolve().then(async () => {
+    await mySwal(React.createElement('strong', {}, ['Hello World']))
+  }).catch(console.error)
+</script>
+</body>
+</html>

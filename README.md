@@ -21,8 +21,8 @@ The following options can be React elements:
 const swal = require('sweetalert2')
 const withReactContent = require('sweetalert2-react-content')
 
-const mySwal = withReactContent(swal)
-// or const mySwal = withReactContent(swal, require('react-dom'))
+const mySwal = withReactContent({ swal })
+// or just `const mySwal = withReactContent()`
 
 mySwal({
   title: <p>Hello World</p>,
@@ -34,3 +34,5 @@ mySwal({
   return mySwal(<p>Shordhand works too</p>))
 }
 ```
+
+The main export is a [UMD module](https://github.com/umdjs/umd) (CommonJS & ESM compatible), and defines `window.sweetalert2ReactContent` in non-CJS/ESM environments.

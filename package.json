@@ -3,10 +3,10 @@
   "version": "0.0.5",
   "repository": "zenflow/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
-  "main": "lib/sweetalert2-react-content.js",
+  "main": "dist/main.bundle.js",
+  "jsnext:main": "lib/main.js",
   "files": [
-    "lib/**",
-    "!lib/.eslintrc.json"
+    "dist/**"
   ],
   "scripts": {
     "dev:tests": "karma start karma.conf.js",
@@ -14,7 +14,8 @@
     "fix": "eslint . --fix",
     "lint": "eslint .",
     "test-only": "karma start karma.conf.js --single-run --report-coverage",
-    "test": "npm run lint && npm run test-only"
+    "test": "npm run lint && npm run test-only",
+    "build": "del-cli dist && webpack --config webpack.config.dist.js"
   },
   "keywords": [
     "sweetalert",
@@ -41,6 +42,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.0",
+    "del-cli": "^1.1.0",
     "eslint": "^4.18.1",
     "eslint-config-zenflow": "^1.1.0",
     "eslint-plugin-import": "^2.9.0",
@@ -71,6 +73,7 @@
     ]
   },
   "eslintIgnore": [
-    "coverage/**"
+    "coverage/**",
+    "dist/**"
   ]
 }
