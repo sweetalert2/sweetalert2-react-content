@@ -5,7 +5,12 @@ const { mounts } = require('./mounts')
 
 const noop = () => {}
 
-function sweetalert2ReactContent({ swal = require('sweetalert2') } = {}) {
+function sweetalert2ReactContent(arg) {
+  const options =
+    typeof arg === 'object'
+      ? arg
+      : { swal: typeof arg === 'function' ? arg : require('sweetalert2') }
+  const { swal } = options
   const fn = (...args) => {
     const params = Object.assign({}, toParams(args)) // safe to mutate this
 
