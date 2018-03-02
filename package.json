@@ -4,9 +4,9 @@
   "repository": "zenflow/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
   "main": "dist/main.bundle.js",
-  "jsnext:main": "src/main.js",
+  "jsnext:main": "dist/main.bundle.js",
   "files": [
-    "dist/**"
+    "dist"
   ],
   "scripts": {
     "dev:tests": "karma start karma.conf.js",
