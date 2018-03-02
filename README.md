@@ -1,4 +1,6 @@
 # sweetalert2-react-content
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/zenflow/sweetalert2-react-content.svg)](https://greenkeeper.io/)
 Dynamic content in SweetAlert2, the React way
 
 [![Build Status](https://travis-ci.org/zenflow/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/zenflow/sweetalert2-react-content)
