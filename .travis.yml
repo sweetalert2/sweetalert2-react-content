@@ -7,3 +7,5 @@ script:
   - xvfb-run npm test
 after_script:
   - cat ./coverage/lcov.info | coveralls
+after_success:
+  - npm run release
