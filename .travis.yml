@@ -8,3 +8,6 @@ script:
   - cat ./coverage/lcov.info | coveralls
 after_success:
   - npm run release
+  - ls dist
+  - ls tarball
+  - tar --gzip --list --verbose --file=tarball/*.tgz
