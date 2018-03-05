@@ -1,5 +1,6 @@
 const { asyncIt } = require('../support/asyncIt')
 const { cleanSwalState } = require('../support/cleanSwalState')
+const { getSwalContentContent } = require('../support/getSwalContentContent')
 const { timeout } = require('../support/timeout')
 
 const swal = require('sweetalert2')
@@ -56,7 +57,22 @@ describe('sweetalert2-react-content', () => {
     const swalPromise = mySwal(<span>React element</span>, 'plain text')
     await timeout(100)
     expect(mySwal.getTitle().innerHTML).toEqual('<span>React element</span>')
-    expect(mySwal.getContent().innerHTML).toContain('plain text')
+    expect(getSwalContentContent().innerHTML.trim()).toEqual('plain text')
+    mySwal.clickConfirm()
+    await swalPromise
+  })
+  asyncIt('has no effect on normal shorthand swal calls', async () => {
+    await cleanSwalState()
+    const mySwal = withReactContent()
+    const swalPromise = mySwal('my title', 'my html', 'error')
+    await timeout(100)
+    expect(mySwal.getTitle().innerHTML).toEqual('my title')
+    expect(getSwalContentContent().innerHTML).toEqual('my html')
+    const shownIconElements = Array.from(
+      window.document.getElementsByClassName('swal2-icon'),
+    ).filter(element => element.style.display !== 'none')
+    expect(shownIconElements.length).toEqual(1)
+    expect(Array.from(shownIconElements[0].classList)).toContain('swal2-error')
     mySwal.clickConfirm()
     await swalPromise
   })
