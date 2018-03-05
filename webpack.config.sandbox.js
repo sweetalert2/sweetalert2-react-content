@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   devtool: 'cheap-module-source-map',
-  entry: ['babel-polyfill', require.resolve('./sandbox/app')],
+  entry: ['babel-polyfill', require.resolve('./sandbox/main')],
   output: {
     pathinfo: true, // Add /* filename */ comments to generated require()s in the output.
     filename: 'bundle.js', // This does not produce a real file. It's just a virtual path.
