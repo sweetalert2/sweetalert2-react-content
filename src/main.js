@@ -1,18 +1,32 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
-const { toParams } = require('./toParams')
 const { mounts } = require('./mounts')
 
 const noop = () => {}
 
 function sweetalert2ReactContent(arg) {
   const options =
-    typeof arg === 'object'
-      ? arg
-      : { swal: typeof arg === 'function' ? arg : require('sweetalert2') }
-  const { swal } = options
+    typeof arg === 'function'
+      ? { swal: arg }
+      : typeof arg === 'object' ? arg : {}
+  const parentSwal = options.swal || require('sweetalert2')
+
+  const argsToParams = args => {
+    if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
+      const params = {}
+      ;['title', 'html', 'type'].forEach((name, index) => {
+        if (args[index] !== undefined) {
+          params[name] = args[index]
+        }
+      })
+      return params
+    } else {
+      return parentSwal.argsToParams(args)
+    }
+  }
+
   const fn = (...args) => {
-    const params = Object.assign({}, toParams(args)) // safe to mutate this
+    const params = Object.assign({}, argsToParams(args)) // safe to mutate this
 
     params.onOpen = params.onOpen || noop
     params.onClose = params.onClose || noop
@@ -26,7 +40,7 @@ function sweetalert2ReactContent(arg) {
 
         const childOnOpen = params.onOpen
         params.onOpen = () => {
-          domElement = getter(swal)
+          domElement = getter(parentSwal)
           ReactDOM.render(reactElement, domElement)
           childOnOpen()
         }
@@ -38,9 +52,10 @@ function sweetalert2ReactContent(arg) {
         }
       }
     }
-    return swal(params)
+    return parentSwal(params)
   }
-  return Object.assign(fn, swal)
+
+  return Object.assign(fn, parentSwal, { argsToParams })
 }
 
 module.exports = sweetalert2ReactContent
