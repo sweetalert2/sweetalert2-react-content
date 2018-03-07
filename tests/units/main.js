@@ -54,10 +54,10 @@ describe('sweetalert2-react-content', () => {
   asyncIt('works with shorthand swal calls', async () => {
     await cleanSwalState()
     const mySwal = withReactContent()
-    const swalPromise = mySwal(<span>React element</span>, 'plain text')
+    const swalPromise = mySwal(<span>title</span>, <span>html</span>)
     await timeout(100)
-    expect(mySwal.getTitle().innerHTML).toEqual('<span>React element</span>')
-    expect(getSwalContentContent().innerHTML.trim()).toEqual('plain text')
+    expect(mySwal.getTitle().innerHTML).toEqual('<span>title</span>')
+    expect(mySwal.getContent().innerHTML).toEqual('<span>html</span>')
     mySwal.clickConfirm()
     await swalPromise
   })
