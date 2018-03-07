@@ -1,6 +1,9 @@
 const { asyncIt } = require('../support/asyncIt')
 const { cleanSwalState } = require('../support/cleanSwalState')
 const { getSwalContentContent } = require('../support/getSwalContentContent')
+const {
+  getVisibleSwalIconNames,
+} = require('../support/getVisibleSwalIconNames')
 const { timeout } = require('../support/timeout')
 
 const swal = require('sweetalert2')
@@ -68,11 +71,7 @@ describe('sweetalert2-react-content', () => {
     await timeout(100)
     expect(mySwal.getTitle().innerHTML).toEqual('my title')
     expect(getSwalContentContent().innerHTML).toEqual('my html')
-    const shownIconElements = Array.from(
-      window.document.getElementsByClassName('swal2-icon'),
-    ).filter(element => element.style.display !== 'none')
-    expect(shownIconElements.length).toEqual(1)
-    expect(Array.from(shownIconElements[0].classList)).toContain('swal2-error')
+    expect(getVisibleSwalIconNames()).toEqual(['error'])
     mySwal.clickConfirm()
     await swalPromise
   })
