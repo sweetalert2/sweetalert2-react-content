@@ -16,8 +16,7 @@
     "lint": "eslint .",
     "test-only": "karma start karma.conf.js --single-run --report-coverage",
     "test": "npm run lint && npm run test-only",
-    "build": "del-cli dist && webpack --config webpack.config.dist.js",
-    "release": "npm run build && semantic-release"
+    "build": "del-cli dist && webpack --config webpack.config.dist.js"
   },
   "keywords": [
     "sweetalert",
