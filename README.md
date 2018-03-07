@@ -35,8 +35,8 @@ mySwal({
     mySwal.clickConfirm() // `mySwal` comes with all of the methods of `swal`
   }
 }).then(() => {
-  return mySwal(<p>Shordhand works too</p>))
-}
+  return mySwal(<p>Shordhand works too</p>)
+})
 ```
 
 The main export is a [UMD module](https://github.com/umdjs/umd) (CommonJS & ESM compatible), and defines `window.sweetalert2ReactContent` in non-CJS/ESM environments.
