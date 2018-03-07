@@ -6,7 +6,8 @@
   "main": "dist/main.bundle.js",
   "jsnext:main": "dist/main.bundle.js",
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "dev:tests": "karma start karma.conf.js",
@@ -36,6 +37,7 @@
     "sweetalert2": "^7.14.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^2.0.0",
     "@semantic-release/git": "^4.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
