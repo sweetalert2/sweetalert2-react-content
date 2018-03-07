@@ -1,9 +1,9 @@
 # sweetalert2-react-content
 
-[![Build Status](https://travis-ci.org/zenflow/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/zenflow/sweetalert2-react-content)
-[![Coverage Status](https://coveralls.io/repos/github/zenflow/sweetalert2-react-content/badge.svg?branch=master)](https://coveralls.io/github/zenflow/sweetalert2-react-content?branch=master)
+[![Build Status](https://travis-ci.org/sweetalert2/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/sweetalert2/sweetalert2-react-content)
+[![Coverage Status](https://coveralls.io/repos/github/sweetalert2/sweetalert2-react-content/badge.svg?branch=master)](https://coveralls.io/github/sweetalert2/sweetalert2-react-content?branch=master)
 [![npm version](https://badge.fury.io/js/sweetalert2-react-content.svg)](https://www.npmjs.com/packages/sweetalert2-react-content)
-[![Greenkeeper badge](https://badges.greenkeeper.io/zenflow/sweetalert2-react-content.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/sweetalert2/sweetalert2-react-content.svg)](https://greenkeeper.io/)
 ![semantic-release badge](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
