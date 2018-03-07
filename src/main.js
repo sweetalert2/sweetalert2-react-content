@@ -4,13 +4,7 @@ const { mounts } = require('./mounts')
 
 const noop = () => {}
 
-function sweetalert2ReactContent(arg) {
-  const options =
-    typeof arg === 'function'
-      ? { swal: arg }
-      : typeof arg === 'object' ? arg : {}
-  const parentSwal = options.swal || require('sweetalert2')
-
+function sweetalert2ReactContent(parentSwal = require('sweetalert2')) {
   const argsToParams = args => {
     if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
       const params = {}
