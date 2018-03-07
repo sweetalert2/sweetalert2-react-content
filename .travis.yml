@@ -4,7 +4,5 @@ sudo: true
 addons:
   google-chrome: latest
 script:
-  - xvfb-run npm test
-  - cat ./coverage/lcov.info | coveralls
-after_success:
-  - npm run release
+  - xvfb-run npm test && cat ./coverage/lcov.info | coveralls && npm run build && semantic-release
+
