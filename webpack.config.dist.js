@@ -1,15 +1,28 @@
 /* eslint-env node */
 const path = require('path')
 
+function expandExternalsConfig(compactConfig) {
+  const expandedConfig = {}
+  for (const packageName of Object.keys(compactConfig)) {
+    expandedConfig[packageName] = {
+      commonjs: packageName,
+      commonjs2: packageName,
+      amd: packageName,
+      root: compactConfig[packageName],
+    }
+  }
+  return expandedConfig
+}
+
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
   entry: [require.resolve('./src/main')],
-  externals: {
+  externals: expandExternalsConfig({
     react: 'React',
     'react-dom': 'ReactDOM',
     sweetalert2: 'swal',
-  },
+  }),
   output: {
     library: 'sweetalert2ReactContent',
     libraryTarget: 'umd',
