@@ -22,8 +22,8 @@ The following options can be React elements:
 ## Example
 
 ```jsx
-const swal = require('sweetalert2')
-const withReactContent = require('sweetalert2-react-content')
+import swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const mySwal = withReactContent(swal)
 // or just `const mySwal = withReactContent()`

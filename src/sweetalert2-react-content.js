@@ -1,10 +1,11 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const { mounts } = require('./mounts')
+import swal from 'sweetalert2'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { mounts } from './mounts'
 
 const noop = () => {}
 
-function sweetalert2ReactContent(parentSwal = require('sweetalert2')) {
+export default function withReactContent(parentSwal = swal) {
   const argsToParams = args => {
     if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
       const params = {}
@@ -51,5 +52,3 @@ function sweetalert2ReactContent(parentSwal = require('sweetalert2')) {
 
   return Object.assign(fn, parentSwal, { argsToParams })
 }
-
-module.exports = sweetalert2ReactContent
