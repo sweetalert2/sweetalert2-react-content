@@ -4,12 +4,12 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
-  entry: [require.resolve('./src/main')],
+  entry: [require.resolve('./src/sweetalert2-react-content')],
   output: {
     library: 'sweetalert2ReactContent',
     libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.bundle.js',
+    filename: 'sweetalert2-react-content.umd.js',
   },
   module: {
     strictExportPresence: true,

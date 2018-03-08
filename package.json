@@ -3,8 +3,8 @@
   "version": "0.2.3",
   "repository": "sweetalert2/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
-  "main": "dist/main.bundle.js",
-  "jsnext:main": "dist/main.bundle.js",
+  "main": "dist/sweetalert2-react-content.umd.js",
+  "jsnext:main": "dist/sweetalert2-react-content.umd.js",
   "files": [
     "dist",
     "CHANGELOG.md"
