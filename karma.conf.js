@@ -1,18 +1,20 @@
 /* eslint-env node */
 const webpackTestsConfig = require('./webpack.config.tests')
-const { reportCoverage } = require('./tests/support/cliFlags')
 
 module.exports = config => {
   config.set({
     files: [
       'node_modules/babel-polyfill/dist/polyfill.min.js',
-      'tests/units/**/*.js',
+      'test/tests/**/*.js',
     ],
     browsers: ['Chrome'],
-    reporters: ['spec', ...(reportCoverage ? ['coverage'] : [])],
+    reporters: [
+      'spec',
+      ...(process.argv.includes('--report-coverage') ? ['coverage'] : []),
+    ],
     frameworks: ['jasmine'],
     preprocessors: {
-      '{src,tests}/**/*.js': ['webpack', 'sourcemap'],
+      '{src,test}/**/*.js': ['webpack', 'sourcemap'],
     },
     webpack: webpackTestsConfig,
     webpackMiddleware: {

@@ -1,16 +1,16 @@
-const { asyncIt } = require('../support/asyncIt')
-const { cleanSwalState } = require('../support/cleanSwalState')
-const { getSwalContentContent } = require('../support/getSwalContentContent')
+const { it } = require('../util/asyncIt')
 const {
+  cleanSwalState,
+  getSwalContentContent,
   getVisibleSwalIconNames,
-} = require('../support/getVisibleSwalIconNames')
-const { timeout } = require('../support/timeout')
+} = require('../util/swalUtil')
+const { timeout } = require('../util/util')
 
 const swal = require('sweetalert2')
 const withReactContent = require('../../src/main')
 
-describe('sweetalert2-react-content', () => {
-  asyncIt('renders React elements for each supported option', async () => {
+describe('integration', () => {
+  it('renders React elements for each supported option', async () => {
     await cleanSwalState()
     const mySwal = withReactContent()
     await mySwal({
@@ -34,7 +34,7 @@ describe('sweetalert2-react-content', () => {
       },
     })
   })
-  asyncIt('can mix React and non-React params', async () => {
+  it('can mix React and non-React params', async () => {
     await cleanSwalState()
     const mySwal = withReactContent()
     await mySwal({
@@ -50,11 +50,11 @@ describe('sweetalert2-react-content', () => {
       },
     })
   })
-  asyncIt('returns a function with the same props as swal', async () => {
+  it('returns a function with the same props as swal', async () => {
     const mySwal = withReactContent()
     expect(Object.keys(mySwal)).toEqual(Object.keys(swal))
   })
-  asyncIt('works with shorthand swal calls', async () => {
+  it('works with shorthand swal calls', async () => {
     await cleanSwalState()
     const mySwal = withReactContent()
     const swalPromise = mySwal(<span>title</span>, <span>html</span>, 'info')
@@ -65,7 +65,7 @@ describe('sweetalert2-react-content', () => {
     mySwal.clickConfirm()
     await swalPromise
   })
-  asyncIt('has no effect on normal shorthand swal calls', async () => {
+  it('has no effect on normal shorthand swal calls', async () => {
     await cleanSwalState()
     const mySwal = withReactContent()
     const swalPromise = mySwal('my title', 'my html', 'error')
@@ -76,8 +76,9 @@ describe('sweetalert2-react-content', () => {
     mySwal.clickConfirm()
     await swalPromise
   })
-  asyncIt('can extend a given swal', async () => {
+  it('can extend a given swal', async () => {
     const mockSwal = params => {
+      expect(typeof params)
       expect(params.title).toEqual('foo')
       return { value: 'bar' }
     }
