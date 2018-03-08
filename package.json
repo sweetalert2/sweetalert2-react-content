@@ -6,9 +6,8 @@
   "main": "dist/sweetalert2-react-content.umd.js",
   "module": "src/sweetalert2-react-content.js",
   "files": [
-    "dist",
-    "src",
-    "!src/.eslintc.json",
+    "dist/**/*",
+    "src/**/*.js",
     "CHANGELOG.md"
   ],
   "scripts": {
