@@ -4,9 +4,11 @@
   "repository": "sweetalert2/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
   "main": "dist/sweetalert2-react-content.umd.js",
-  "jsnext:main": "dist/sweetalert2-react-content.umd.js",
+  "module": "src/sweetalert2-react-content.js",
   "files": [
     "dist",
+    "src",
+    "!src/.eslintc.json",
     "CHANGELOG.md"
   ],
   "scripts": {
