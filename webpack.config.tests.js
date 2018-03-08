@@ -1,6 +1,5 @@
 /* eslint-env node */
 const webpack = require('webpack')
-const { reportCoverage } = require('./tests/support/cliFlags')
 
 module.exports = {
   mode: 'development',
@@ -13,7 +12,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: reportCoverage
+            plugins: process.argv.includes('--report-coverage')
               ? [['istanbul', { include: ['src/**/*.js'] }]]
               : [],
           },
