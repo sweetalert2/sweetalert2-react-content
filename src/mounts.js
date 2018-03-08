@@ -1,4 +1,4 @@
-const mounts = [
+export const mounts = [
   {
     key: 'title',
     getter: swal => swal.getTitle(),
@@ -20,5 +20,3 @@ const mounts = [
     getter: swal => swal.getFooter(),
   },
 ]
-
-module.exports = { mounts }

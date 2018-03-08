@@ -1,13 +1,12 @@
-const { it } = require('../util/asyncIt')
-const {
+import swal from 'sweetalert2'
+import withReactContent from '../../src/sweetalert2-react-content'
+import { it } from '../util/asyncIt'
+import {
   cleanSwalState,
   getSwalContentContent,
   getVisibleSwalIconNames,
-} = require('../util/swalUtil')
-const { timeout } = require('../util/util')
-
-const swal = require('sweetalert2')
-const withReactContent = require('../../src/sweetalert2-react-content')
+} from '../util/swalUtil'
+import { timeout } from '../util/util'
 
 describe('integration', () => {
   it('renders React elements for each supported option', async () => {

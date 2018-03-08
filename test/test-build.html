@@ -9,7 +9,8 @@
 </head>
 <body>
 <script>
-  mySwal = sweetalert2ReactContent(swal)
+  let withReactContent = sweetalert2ReactContent.default
+  let mySwal = withReactContent(swal)
   Promise.resolve().then(async () => {
     await mySwal(React.createElement('strong', {}, ['Hello World']))
   }).catch(console.error)
