@@ -7,7 +7,7 @@ const {
 const { timeout } = require('../util/util')
 
 const swal = require('sweetalert2')
-const withReactContent = require('../../src/main')
+const withReactContent = require('../../src/sweetalert2-react-content')
 
 describe('integration', () => {
   it('renders React elements for each supported option', async () => {
