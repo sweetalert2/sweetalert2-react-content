@@ -1,3 +1,12 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v0.2.3...v0.3.0) (2018-03-08)
+
+
+### Features
+
+* **package:** improve filenames ([5cea0c0](https://github.com/sweetalert2/sweetalert2-react-content/commit/5cea0c0))
+* **package:** use es modules ([af47116](https://github.com/sweetalert2/sweetalert2-react-content/commit/af47116))
+
 <a name="0.2.3"></a>
 ## [0.2.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v0.2.2...v0.2.3) (2018-03-07)
 
