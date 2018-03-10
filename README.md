@@ -5,6 +5,7 @@
 [![npm version](https://badge.fury.io/js/sweetalert2-react-content.svg)](https://www.npmjs.com/packages/sweetalert2-react-content)
 [![Greenkeeper badge](https://badges.greenkeeper.io/sweetalert2/sweetalert2-react-content.svg)](https://greenkeeper.io/)
 ![semantic-release badge](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
+![typescript .d.ts included](https://img.shields.io/badge/typescript-ready-brightgreen.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Dynamic content in SweetAlert2, the React way
