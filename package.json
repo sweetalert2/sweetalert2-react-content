@@ -5,9 +5,10 @@
   "main": "dist/sweetalert2-react-content.cjs.js",
   "module": "dist/sweetalert2-react-content.es.js",
   "browser": "dist/sweetalert2-react-content.umd.js",
+  "types": "src/sweetalert2-react-content.d.ts",
   "files": [
     "dist/**/*",
-    "src/**/*.js",
+    "src/**/*.{js,d.ts}",
     "CHANGELOG.md"
   ],
   "scripts": {
