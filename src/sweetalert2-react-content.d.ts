@@ -12,7 +12,7 @@ import swal, { SweetAlertOptions, SweetAlertResult, SweetAlertType } from 'sweet
  * @param parentSwal SweetAlert2-compatible implementation if you want to pass your own wrapper.
  *                   By default, it will be the SweetAlert2 library itself.
  *
- * @returns {SweetAlert2 & ReactSweetAlert}
+ * @returns A SweetAlert2-compatible interface with React capabilities added.
  */
 export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 & ReactSweetAlert;
 
