@@ -22,9 +22,9 @@ export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 
 interface ReactSweetAlert {
   (title?: ReactElementOr<'title'>, message?: ReactElementOr<'html'>, type?: SweetAlertType): Promise<SweetAlertResult>;
 
-  (options: ReactSweetAlertOptions & { useRejections?: false }) : Promise<SweetAlertResult>;
+  (options: ReactSweetAlertOptions & { useRejections?: false }): Promise<SweetAlertResult>;
 
-  (options: ReactSweetAlertOptions & { useRejections: true }) : Promise<any>;
+  (options: ReactSweetAlertOptions & { useRejections: true }): Promise<any>;
 }
 
 type SweetAlert2 = typeof swal;
