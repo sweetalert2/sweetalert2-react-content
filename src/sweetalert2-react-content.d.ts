@@ -20,7 +20,7 @@ export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 
  * Mimics SweetAlert2's call signatures, adding React elements as valid inputs.
  */
 interface ReactSweetAlert {
-  (title?: MaybeReact, message?: MaybeReact, type?: SweetAlertType): Promise<SweetAlertResult>;
+  (title?: ReactElementOr<'title'>, message?: ReactElementOr<'html'>, type?: SweetAlertType): Promise<SweetAlertResult>;
 
   (options: ReactSweetAlertOptions & { useRejections?: false }) : Promise<SweetAlertResult>;
 
@@ -31,14 +31,14 @@ type SweetAlert2 = typeof swal;
 
 type ReactSweetAlertOptions = Overwrite<SweetAlertOptions, ReactOptions>;
 
-type MaybeReact = string | ReactElement<any>;
+type ReactElementOr<K extends keyof SweetAlertOptions> = SweetAlertOptions[K] | ReactElement<any>;
 
 interface ReactOptions {
-  title?: MaybeReact;
-  html?: MaybeReact;
-  confirmButtonText?: MaybeReact;
-  cancelButtonText?: MaybeReact;
-  footer?: MaybeReact;
+  title?: ReactElementOr<'title'>;
+  html?: ReactElementOr<'html'>;
+  confirmButtonText?: ReactElementOr<'confirmButtonText'>;
+  cancelButtonText?: ReactElementOr<'cancelButtonText'>;
+  footer?: ReactElementOr<'footer'>;
 }
 
 // Diff<> and Owerwrite<> types below are inspired from this GitHub comment:
