@@ -3,8 +3,9 @@
   "version": "0.3.1",
   "repository": "sweetalert2/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
-  "main": "dist/sweetalert2-react-content.umd.js",
-  "module": "src/sweetalert2-react-content.js",
+  "main": "dist/sweetalert2-react-content.cjs.js",
+  "module": "dist/sweetalert2-react-content.esm.js",
+  "browser": "dist/sweetalert2-react-content.umd.js",
   "files": [
     "dist/**/*",
     "src/**/*.js",
@@ -17,7 +18,7 @@
     "lint": "eslint .",
     "test-only": "karma start karma.conf.js --single-run --report-coverage",
     "test": "npm run lint && npm run test-only",
-    "build": "del-cli dist && webpack --config webpack.config.dist.js"
+    "build": "zenflow-build-js-lib"
   },
   "keywords": [
     "sweetalert",
@@ -30,6 +31,10 @@
     "email": "zenflow87@gmail.com"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenflow/sweetalert2-react-content/issues"
+  },
+  "homepage": "https://github.com/zenflow/sweetalert2-react-content#readme",
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.0.0",
@@ -46,7 +51,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.0",
-    "del-cli": "^1.1.0",
     "eslint": "^4.18.2",
     "eslint-config-zenflow": "^1.1.1",
     "eslint-plugin-import": "^2.9.0",
@@ -70,7 +74,8 @@
     "semantic-release": "^15.0.0",
     "sweetalert2": "^7.15.1",
     "webpack": "^4.1.1",
-    "webpack-serve": "^0.1.5"
+    "webpack-serve": "^0.1.5",
+    "zenflow-build-js-lib": "^0.1.1"
   },
   "eslintConfig": {
     "extends": [
@@ -81,6 +86,21 @@
     "coverage/**",
     "dist/**"
   ],
+  "zenflowConfig": {
+    "build": {
+      "externals": [
+        "sweetalert2",
+        "react",
+        "react-dom"
+      ],
+      "globals": {
+        "sweetalert2": "swal",
+        "react": "React",
+        "react-dom": "ReactDOM"
+      },
+      "global": "sweetalert2ReactContent"
+    }
+  },
   "greenkeeper": {
     "ignore": [
       "webpack-serve"

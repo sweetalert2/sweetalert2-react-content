@@ -8,7 +8,7 @@ export class StatefulElement extends Component {
   render() {
     return (
       <div>
-        <span>nummer: {this.state.number} </span>
+        <span>number: {this.state.number} </span>
         <button
           onClick={() => this.setState({ number: this.state.number - 1 })}
         >
