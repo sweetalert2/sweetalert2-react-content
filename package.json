@@ -1,7 +1,6 @@
 {
   "name": "sweetalert2-react-content",
   "version": "0.3.1",
-  "repository": "sweetalert2/sweetalert2-react-content",
   "description": "Dynamic content in SweetAlert2, the React way",
   "main": "dist/sweetalert2-react-content.cjs.js",
   "module": "dist/sweetalert2-react-content.esm.js",
@@ -19,6 +18,10 @@
     "test-only": "karma start karma.conf.js --single-run --report-coverage",
     "test": "npm run lint && npm run test-only",
     "build": "zenflow-build-js-lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweetalert2/sweetalert2-react-content.git"
   },
   "keywords": [
     "sweetalert",
