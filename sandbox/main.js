@@ -1,5 +1,5 @@
 import swal from 'sweetalert2'
-import sweetalert2ReactContent from '../src/sweetalert2-react-content'
+import sweetalert2ReactContent from '../src/index'
 import { swalWithReactContent } from './swalWithReactContent'
 import { example } from './example'
 
