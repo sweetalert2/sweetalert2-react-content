@@ -32,9 +32,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zenflow/sweetalert2-react-content/issues"
+    "url": "https://github.com/sweetalert2/sweetalert2-react-content/issues"
   },
-  "homepage": "https://github.com/zenflow/sweetalert2-react-content#readme",
+  "homepage": "https://github.com/sweetalert2/sweetalert2-react-content#readme",
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.0.0",
