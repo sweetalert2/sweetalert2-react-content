@@ -55,7 +55,7 @@
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.0",
     "eslint": "^4.18.2",
-    "eslint-config-zenflow": "^1.1.1",
+    "eslint-config-zenflow": "^2.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0",
