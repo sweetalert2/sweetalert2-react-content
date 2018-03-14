@@ -1,6 +1,6 @@
 import swal from 'sweetalert2'
 import withReactContent from '../../src/index'
-import { it } from '../util/asyncIt'
+import { describe, expect, it } from '../util/framework'
 import {
   cleanSwalState,
   getSwalContentContent,

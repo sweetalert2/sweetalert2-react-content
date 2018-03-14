@@ -1,5 +1,7 @@
+/* global describe, expect, it */
+
 const asyncIt = (desc, fn) => {
   it(desc, done => fn().then(done, done.fail))
 }
 
-export { asyncIt as it }
+export { describe, expect, asyncIt as it }
