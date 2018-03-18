@@ -3,6 +3,13 @@ node_js: node
 sudo: true
 addons:
   google-chrome: latest
-script:
-  - xvfb-run npm test && cat ./coverage/lcov.info | coveralls && npm run build && semantic-release
-
+stages:
+  - name: test
+  - name: release
+    if: branch = master
+jobs:
+  include:
+    - stage: test
+      script: xvfb-run npm test && cat ./coverage/lcov.info | coveralls
+    - stage: release
+      script: npm run build && semantic-release
