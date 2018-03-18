@@ -71,7 +71,7 @@
     "webpack": "^4.1.1",
     "webpack-serve": "^0.1.5",
     "zenflow-build-js-lib": "^1.0.0",
-    "zenflow-lint-js": "^1.0.0"
+    "zenflow-lint-js": "^2.0.0"
   },
   "zenflowConfig": {
     "build": {
