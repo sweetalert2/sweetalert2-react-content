@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-react-content",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Dynamic content in SweetAlert2, the React way",
   "main": "dist/sweetalert2-react-content.cjs.js",
   "module": "dist/sweetalert2-react-content.es.js",
