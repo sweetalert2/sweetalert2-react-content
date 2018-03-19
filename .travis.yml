@@ -6,7 +6,7 @@ addons:
 stages:
   - name: test
   - name: release
-    if: branch = master
+    if: branch = master and type = push
 jobs:
   include:
     - stage: test
