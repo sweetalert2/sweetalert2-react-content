@@ -14,7 +14,7 @@
   "scripts": {
     "dev:tests": "karma start karma.conf.js",
     "dev:sandbox": "webpack-serve webpack.config.sandbox.js --no-hot --no-reload --open",
-    "check-dts": "tsc src/sweetalert2-react-content.d.ts --target ES6",
+    "check-dts": "tsc src/sweetalert2-react-content.d.ts --lib dom,es6",
     "lint": "run-s lint:*",
     "lint:es": "zenflow-lint-js",
     "lint:ts": "tslint -t codeFrame 'src/**/*.d.ts'",
