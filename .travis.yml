@@ -2,7 +2,7 @@ language: node_js
 node_js: node
 sudo: true
 addons:
-  google-chrome: latest
+  chrome: stable
 stages:
   - name: test
   - name: release
