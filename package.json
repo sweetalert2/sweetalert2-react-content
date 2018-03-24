@@ -23,7 +23,7 @@
     "fix:ts": "npm run lint:ts --fix",
     "test-only": "karma start karma.conf.js --single-run --report-coverage",
     "test": "npm run check-dts && npm run lint && npm run test-only",
-    "build": "zenflow-build-js-lib --minify --sourcemap"
+    "build": "zenflow-build-js-lib --prod"
   },
   "repository": {
     "type": "git",
@@ -80,7 +80,7 @@
     "typescript": "^2.7.2",
     "webpack": "^4.1.1",
     "webpack-serve": "^0.1.5",
-    "zenflow-build-js-lib": "^1.0.0",
+    "zenflow-build-js-lib": "^2.0.1",
     "zenflow-lint-js": "^2.0.0"
   },
   "zenflowConfig": {
