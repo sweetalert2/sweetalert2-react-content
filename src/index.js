@@ -1,11 +1,10 @@
-import Swal from 'sweetalert2'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { mounts } from './mounts'
 
 const noop = () => {}
 
-export default function withReactContent(ParentSwal = Swal) {
+export default function withReactContent(ParentSwal) {
   return class extends ParentSwal {
     static argsToParams(args) {
       if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
