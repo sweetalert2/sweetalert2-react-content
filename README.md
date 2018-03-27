@@ -1,5 +1,7 @@
 # sweetalert2-react-content
 
+Official sweetalert2 enhancer adding support for React elements as content.
+
 [![Build Status](https://travis-ci.org/sweetalert2/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/sweetalert2/sweetalert2-react-content)
 [![Coverage Status](https://coveralls.io/repos/github/sweetalert2/sweetalert2-react-content/badge.svg?branch=master)](https://coveralls.io/github/sweetalert2/sweetalert2-react-content?branch=master)
 [![npm version](https://badge.fury.io/js/sweetalert2-react-content.svg)](https://www.npmjs.com/packages/sweetalert2-react-content)
@@ -7,10 +9,6 @@
 [![semantic-release badge](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/sweetalert2/sweetalert2-react-content/blob/master/CHANGELOG.md)
 [![typescript .d.ts included](https://img.shields.io/badge/typescript-ready-brightgreen.svg)](https://github.com/sweetalert2/sweetalert2-react-content/blob/master/src/sweetalert2-react-content.d.ts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-Dynamic content in SweetAlert2, the React way
-
-`sweetalert2-react-content` is a sweetalert2 decorator adding support for React elements as content.
 
 The following options can be React elements:
 
