@@ -1,20 +1,20 @@
-const swal = require('sweetalert2')
+import Swal from 'sweetalert2/dist/sweetalert2' // js-only, no styles
 
-export async function cleanSwalState() {
-  swal.resetDefaults()
-  await swal({
+async function cleanSwalState() {
+  Swal.resetDefaults()
+  await Swal({
     animation: false,
     title: 'clear',
-    onOpen: () => swal.clickConfirm(),
+    onOpen: () => Swal.clickConfirm(),
   })
 }
 
-export function getSwalContentContent() {
-  const content = swal.getContent()
+function getSwalContentContent() {
+  const content = Swal.getContent()
   return content && content.querySelector('#swal2-content')
 }
 
-export function getVisibleSwalIconNames() {
+function getVisibleSwalIconNames() {
   return ['success', 'error', 'warning', 'info', 'question'].filter(name => {
     const iconElement = window.document.querySelector(
       `.swal2-icon.swal2-${name}`,
@@ -22,3 +22,5 @@ export function getVisibleSwalIconNames() {
     return iconElement && iconElement.style.display !== 'none'
   })
 }
+
+export { Swal, cleanSwalState, getSwalContentContent, getVisibleSwalIconNames }

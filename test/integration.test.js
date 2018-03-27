@@ -1,14 +1,20 @@
-import Swal from 'sweetalert2'
-import withReactContent from '../../src/index'
-import { describe, expect, it } from '../util/framework'
+/* eslint-env jest */
+
+import React from 'react'
+import withReactContent from '../src/index'
 import {
+  Swal,
   cleanSwalState,
   getSwalContentContent,
   getVisibleSwalIconNames,
-} from '../util/swalUtil'
-import { timeout } from '../util/util'
+} from './util/swalUtil'
+import { timeout } from './util/util'
 
 describe('integration', () => {
+  beforeAll(async () => {
+    // jest doesn't implement `window.scrollTo` so we need to mock it
+    window.scrollTo = () => {}
+  })
   it('renders React elements for each supported option', async () => {
     await cleanSwalState()
     const MySwal = withReactContent(Swal)
@@ -52,10 +58,10 @@ describe('integration', () => {
   it('returns a class with the same instance & static properties as Swal', async () => {
     const MySwal = withReactContent(Swal)
     Object.keys(Swal).forEach(key => {
-      expect(typeof MySwal[key]).toBe(typeof Swal[key])
+      expect(typeof MySwal[key]).toEqual(typeof Swal[key])
     })
     Object.keys(Swal.prototype).forEach(key => {
-      expect(typeof MySwal.prototype[key]).toBe(typeof Swal.prototype[key])
+      expect(typeof MySwal.prototype[key]).toEqual(typeof Swal.prototype[key])
     })
   })
   it('works with shorthand Swal calls', async () => {
