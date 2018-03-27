@@ -9,10 +9,10 @@
 </head>
 <body>
 <script>
-  let withReactContent = sweetalert2ReactContent.default
-  let mySwal = withReactContent(swal)
+  let withReactContent = sweetalert2ReactContent
+  let MySwal = withReactContent(Swal)
   Promise.resolve().then(async () => {
-    await mySwal(React.createElement('strong', {}, ['Hello World']))
+    await MySwal.fire(React.createElement('strong', {}, ['Hello World']))
   }).catch(console.error)
 </script>
 </body>

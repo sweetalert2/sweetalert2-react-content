@@ -1,54 +1,54 @@
-import swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { mounts } from './mounts'
 
 const noop = () => {}
 
-export default function withReactContent(parentSwal = swal) {
-  const argsToParams = args => {
-    if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
-      const params = {}
-      ;['title', 'html', 'type'].forEach((name, index) => {
-        if (args[index] !== undefined) {
-          params[name] = args[index]
-        }
-      })
-      return params
-    } else {
-      return parentSwal.argsToParams(args)
-    }
-  }
-
-  const fn = (...args) => {
-    const params = Object.assign({}, argsToParams(args)) // safe to mutate this
-
-    params.onOpen = params.onOpen || noop
-    params.onClose = params.onClose || noop
-
-    for (const { key, getter } of mounts) {
-      if (React.isValidElement(params[key])) {
-        const reactElement = params[key]
-        params[key] = ' '
-
-        let domElement
-
-        const childOnOpen = params.onOpen
-        params.onOpen = () => {
-          domElement = getter(parentSwal)
-          ReactDOM.render(reactElement, domElement)
-          childOnOpen()
-        }
-
-        const childOnClose = params.onClose
-        params.onClose = () => {
-          childOnClose()
-          ReactDOM.unmountComponentAtNode(domElement)
-        }
+export default function withReactContent(ParentSwal = Swal) {
+  return class extends ParentSwal {
+    static argsToParams(args) {
+      if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
+        const params = {}
+        ;['title', 'html', 'type'].forEach((name, index) => {
+          if (args[index] !== undefined) {
+            params[name] = args[index]
+          }
+        })
+        return params
+      } else {
+        return ParentSwal.argsToParams(args)
       }
     }
-    return parentSwal(params)
-  }
+    _main(params) {
+      params = Object.assign({}, params)
 
-  return Object.assign(fn, parentSwal, { argsToParams })
+      params.onOpen = params.onOpen || noop
+      params.onClose = params.onClose || noop
+
+      mounts.forEach(({ key, getter }) => {
+        if (React.isValidElement(params[key])) {
+          const reactElement = params[key]
+          params[key] = ' '
+
+          let domElement
+
+          const superOnOpen = params.onOpen
+          params.onOpen = () => {
+            domElement = getter(ParentSwal)
+            ReactDOM.render(reactElement, domElement)
+            superOnOpen()
+          }
+
+          const superOnClose = params.onClose
+          params.onClose = () => {
+            superOnClose()
+            ReactDOM.unmountComponentAtNode(domElement)
+          }
+        }
+      })
+
+      return super._main(params)
+    }
+  }
 }

@@ -21,20 +21,20 @@ The following options can be React elements:
 ## Example
 
 ```jsx
-import swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-const mySwal = withReactContent(swal)
-// or just `const mySwal = withReactContent()`
+const MySwal = withReactContent(Swal)
+// or just `const MySwal = withReactContent()`
 
-mySwal({
+MySwal.fire({
   title: <p>Hello World</p>,
   footer: 'Copyright 2018',
   onOpen: () => {
-    mySwal.clickConfirm() // `mySwal` comes with all of the methods of `swal`
+    MySwal.clickConfirm() // `MySwal` is a subclass of `Swal` with all the same instance & static methods
   }
 }).then(() => {
-  return mySwal(<p>Shordhand works too</p>)
+  return MySwal.fire(<p>Shorthand works too</p>)
 })
 ```
 
