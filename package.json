@@ -48,7 +48,7 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "sweetalert2": "^7.14.0"
+    "sweetalert2": "^7.18.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.0",
@@ -75,7 +75,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "semantic-release": "^15.0.0",
-    "sweetalert2": "^7.15.1",
+    "sweetalert2": "^7.18.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2",
     "webpack": "^4.1.1",
