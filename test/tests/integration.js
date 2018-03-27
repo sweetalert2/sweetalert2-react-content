@@ -11,7 +11,7 @@ import { timeout } from '../util/util'
 describe('integration', () => {
   it('renders React elements for each supported option', async () => {
     await cleanSwalState()
-    const MySwal = withReactContent()
+    const MySwal = withReactContent(Swal)
     await MySwal.fire({
       animation: false,
       title: <span>title</span>,
@@ -35,7 +35,7 @@ describe('integration', () => {
   })
   it('can mix React and non-React params', async () => {
     await cleanSwalState()
-    const MySwal = withReactContent()
+    const MySwal = withReactContent(Swal)
     await MySwal.fire({
       animation: false,
       title: <span>React element</span>,
@@ -50,7 +50,7 @@ describe('integration', () => {
     })
   })
   it('returns a class with the same instance & static properties as Swal', async () => {
-    const MySwal = withReactContent()
+    const MySwal = withReactContent(Swal)
     Object.keys(Swal).forEach(key => {
       expect(typeof MySwal[key]).toBe(typeof Swal[key])
     })
@@ -60,7 +60,7 @@ describe('integration', () => {
   })
   it('works with shorthand Swal calls', async () => {
     await cleanSwalState()
-    const MySwal = withReactContent()
+    const MySwal = withReactContent(Swal)
     const swal = MySwal.fire(<span>title</span>, <span>html</span>, 'info')
     await timeout(100)
     expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
@@ -71,7 +71,7 @@ describe('integration', () => {
   })
   it('has no effect on normal shorthand Swal calls', async () => {
     await cleanSwalState()
-    const MySwal = withReactContent()
+    const MySwal = withReactContent(Swal)
     const swal = MySwal.fire('my title', 'my html', 'error')
     await timeout(100)
     expect(MySwal.getTitle().innerHTML).toEqual('my title')

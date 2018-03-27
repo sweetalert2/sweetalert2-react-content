@@ -86,7 +86,6 @@
   "zenflowConfig": {
     "build": {
       "globals": {
-        "sweetalert2": "swal",
         "react": "React",
         "react-dom": "ReactDOM"
       }
