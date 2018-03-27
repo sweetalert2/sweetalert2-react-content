@@ -12,8 +12,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "dev:tests": "karma start karma.conf.js",
-    "dev:sandbox": "webpack-serve webpack.config.sandbox.js --no-hot --no-reload --open",
+    "start": "jest --verbose --watch --notify",
     "check-dts": "tsc src/sweetalert2-react-content.d.ts --lib dom,es6",
     "lint": "run-s lint:*",
     "lint:es": "zenflow-lint-js",
@@ -21,7 +20,7 @@
     "fix": "run-s fix:*",
     "fix:es": "zenflow-lint-js --fix",
     "fix:ts": "npm run lint:ts --fix",
-    "test-only": "karma start karma.conf.js --single-run --report-coverage",
+    "test-only": "jest --verbose --ci",
     "test": "npm run check-dts && npm run lint && npm run test-only",
     "build": "zenflow-build-js-lib --prod"
   },
@@ -54,33 +53,19 @@
     "@semantic-release/changelog": "^2.0.0",
     "@semantic-release/git": "^4.0.0",
     "@types/react": "^16.0.40",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-istanbul": "^4.1.5",
-    "babel-polyfill": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.0",
-    "html-webpack-plugin": "^3.0.6",
-    "jasmine": "^3.1.0",
-    "karma": "^2.0.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.1.1",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-spec-reporter": "0.0.32",
-    "karma-webpack": "^3.0.0",
+    "jest": "^22.4.3",
     "npm-run-all": "^4.1.2",
-    "prettier": "^1.11.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "semantic-release": "^15.0.0",
     "sweetalert2": "^7.18.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2",
-    "webpack": "^4.1.1",
-    "webpack-serve": "^0.1.5",
-    "zenflow-build-js-lib": "^2.0.1",
+    "zenflow-build-js-lib": "^3.0.0",
     "zenflow-lint-js": "^2.0.0"
   },
   "zenflowConfig": {
@@ -90,6 +75,13 @@
         "react-dom": "ReactDOM"
       }
     }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageDirectory": "coverage"
   },
   "greenkeeper": {
     "ignore": [
