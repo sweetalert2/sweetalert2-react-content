@@ -1,3 +1,20 @@
+# [1.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v0.5.0...v1.0.0) (2018-03-27)
+
+
+### Bug Fixes
+
+* **api:** be a normal enhancer, require the Swal argument (no default) ([a331c59](https://github.com/sweetalert2/sweetalert2-react-content/commit/a331c59))
+
+
+### Features
+
+* **api:** integrate changes from sweetalert2/sweetalert2[#1036](https://github.com/sweetalert2/sweetalert2-react-content/issues/1036) ([b661367](https://github.com/sweetalert2/sweetalert2-react-content/commit/b661367))
+
+
+### BREAKING CHANGES
+
+* **api:** no default value for the `Swal` argument
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v0.4.0...v0.5.0) (2018-03-19)
 
