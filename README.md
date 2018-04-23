@@ -18,7 +18,13 @@ The following options can be React elements:
  - cancelButtonText
  - footer
 
-## Example
+## Installation
+
+```bash
+npm install --save sweetalert2 sweetalert2-react-content
+```
+
+## Usage Example
 
 ```jsx
 import Swal from 'sweetalert2'
