@@ -1,6 +1,6 @@
 # sweetalert2-react-content
 
-Official sweetalert2 enhancer adding support for React elements as content.
+Official [SweetAlert2](https://sweetalert2.github.io/) enhancer adding support for React elements as content.
 
 [![Build Status](https://travis-ci.org/sweetalert2/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/sweetalert2/sweetalert2-react-content)
 [![Coverage Status](https://coveralls.io/repos/github/sweetalert2/sweetalert2-react-content/badge.svg?branch=master)](https://coveralls.io/github/sweetalert2/sweetalert2-react-content?branch=master)
