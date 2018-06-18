@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.0...v1.0.1) (2018-06-18)
+
+
+### Bug Fixes
+
+* **typescript:** replace Diff type with new built-in Exclude type ([#43](https://github.com/sweetalert2/sweetalert2-react-content/issues/43)) ([973b68b](https://github.com/sweetalert2/sweetalert2-react-content/commit/973b68b))
+
 # [1.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v0.5.0...v1.0.0) (2018-03-27)
 
 
