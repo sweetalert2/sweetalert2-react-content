@@ -41,16 +41,8 @@ interface ReactOptions {
   footer?: ReactElementOr<'footer'>;
 }
 
-// Diff<> and Owerwrite<> types below are inspired from this GitHub comment:
-// https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-307871458
-
-// Diff<T, U> is a subtraction operator for string literal types.
-// It returns the string types of T that are not in U.
-// ex: Diff<('a' | 'b' | 'c'), ('c' | 'd')>;  // 'a' | 'b'
-type Diff<T extends string, U extends string> =
-  ({ [P in T]: P } & { [P in U]: never } & { [x: string]: never })[T];
-
 // Overwrite<T, U> will take the properties of U and add to it the properties of T that are not in U.
 // This emulates an overwrite (override) of chosen properties of T with properties of U.
 // It works like { ...T, ...U } in JS.
-type Overwrite<T, U> = Pick<T, Diff<keyof T, keyof U>> & U;
+// https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-393936055
+type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
