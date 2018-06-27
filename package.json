@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.0",
-    "@semantic-release/git": "^4.0.0",
+    "@semantic-release/git": "^5.0.0",
     "@types/react": "^16.0.40",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
