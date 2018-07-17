@@ -50,7 +50,7 @@
     "sweetalert2": "^7.18.0"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^2.0.0",
+    "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^4.0.0",
     "@types/react": "^16.0.40",
     "babel-plugin-transform-class-properties": "^6.24.1",
