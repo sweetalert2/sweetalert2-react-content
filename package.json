@@ -12,7 +12,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "start": "jest --verbose --watch --notify",
+    "start": "jest --env=node --verbose --watch --notify",
     "check-dts": "tsc src/sweetalert2-react-content.d.ts --lib dom,es6",
     "lint": "run-s lint:*",
     "lint:es": "zenflow-lint-js",
@@ -20,7 +20,7 @@
     "fix": "run-s fix:*",
     "fix:es": "zenflow-lint-js --fix",
     "fix:ts": "npm run lint:ts --fix",
-    "test-only": "jest --verbose --ci",
+    "test-only": "jest --env=node --verbose --ci",
     "test": "npm run check-dts && npm run lint && npm run test-only",
     "build": "zenflow-build-js-lib --prod"
   },
