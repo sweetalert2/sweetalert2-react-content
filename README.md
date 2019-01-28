@@ -21,7 +21,7 @@ The following options can be React elements:
 ## Installation
 
 ```bash
-npm install --save sweetalert2@^7.18.0 sweetalert2-react-content
+npm install --save sweetalert2 sweetalert2-react-content
 ```
 
 ## Usage Example
