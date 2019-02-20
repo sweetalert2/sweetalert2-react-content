@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.1...v1.0.2) (2019-02-20)
+
+
+### Bug Fixes
+
+* **banner:** fix version number in banner comment, closes [#48](https://github.com/sweetalert2/sweetalert2-react-content/issues/48) ([#74](https://github.com/sweetalert2/sweetalert2-react-content/issues/74)) ([a30f59b](https://github.com/sweetalert2/sweetalert2-react-content/commit/))
+
 ## [1.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.0...v1.0.1) (2018-06-18)
 
 
