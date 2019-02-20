@@ -1,8 +1,7 @@
 import Swal from 'sweetalert2/dist/sweetalert2' // js-only, no styles
 
 async function cleanSwalState() {
-  Swal.resetDefaults()
-  await Swal({
+  await Swal.fire({
     animation: false,
     title: 'clear',
     onOpen: () => Swal.clickConfirm(),
