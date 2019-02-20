@@ -48,7 +48,7 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "sweetalert2": "^7.18.0"
+    "sweetalert2": "^7.18.0 || ^8.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
