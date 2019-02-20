@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.2...v1.0.3) (2019-02-20)
+
+
+### Bug Fixes
+
+* **changelog:** add missing changelog entry for v1.0.2 ([#77](https://github.com/sweetalert2/sweetalert2-react-content/issues/77)) ([915e624](https://github.com/sweetalert2/sweetalert2-react-content/commit/915e624))
+
 ## [1.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.1...v1.0.2) (2019-02-20)
 
 
