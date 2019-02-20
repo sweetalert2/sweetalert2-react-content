@@ -22,7 +22,8 @@
     "fix:ts": "npm run lint:ts --fix",
     "test-only": "jest --ci",
     "test": "npm run check-dts && npm run lint && npm run test-only",
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

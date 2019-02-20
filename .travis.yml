@@ -9,7 +9,7 @@ jobs:
     - stage: test
       script: npm test && cat ./coverage/lcov.info | coveralls
     - stage: release
-      script: npm run build && semantic-release
+      script: semantic-release
 notifications:
   email:
     on_success: never
