@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { mounts } from './mounts'
 
 const noop = () => {}
+const error = message => new Error(`sweetalert2-react-content: ${message}`)
 
 export default function withReactContent(ParentSwal) {
   return class extends ParentSwal {
@@ -48,6 +49,11 @@ export default function withReactContent(ParentSwal) {
       })
 
       return super._main(params)
+    }
+    update() {
+      throw error(
+        'Swal.update() is not yet supported. See https://github.com/sweetalert2/sweetalert2-react-content/issues/73',
+      )
     }
   }
 }
