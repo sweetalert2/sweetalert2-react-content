@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.3...v1.1.0) (2019-03-23)
+
+
+### Features
+
+* **package:** add `^8.2.2` to version range for sweetalert2 peer dep ([a39a635](https://github.com/sweetalert2/sweetalert2-react-content/commit/a39a635))
+* **update-method:** throw error when swal.update() is called ([e442747](https://github.com/sweetalert2/sweetalert2-react-content/commit/e442747))
+
 ## [1.0.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.2...v1.0.3) (2019-02-20)
 
 
