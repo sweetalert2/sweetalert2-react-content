@@ -7,7 +7,7 @@ stages:
 jobs:
   include:
     - stage: test
-      script: npm test && cat ./coverage/lcov.info | coveralls
+      script: yarn test && cat ./coverage/lcov.info | coveralls
     - stage: release
       script: semantic-release
 notifications:
