@@ -2,7 +2,7 @@
 
 Official [SweetAlert2](https://sweetalert2.github.io/) enhancer adding support for React elements as content.
 
-[![Build Status](https://travis-ci.org/sweetalert2/sweetalert2-react-content.svg?branch=master)](https://travis-ci.org/sweetalert2/sweetalert2-react-content)
+[![Build Status](https://github.com/sweetalert2/sweetalert2-react-content/workflows/build/badge.svg)](https://github.com/sweetalert2/sweetalert2-react-content/actions)
 [![Coverage Status](https://coveralls.io/repos/github/sweetalert2/sweetalert2-react-content/badge.svg?branch=master)](https://coveralls.io/github/sweetalert2/sweetalert2-react-content?branch=master)
 [![npm version](https://badge.fury.io/js/sweetalert2-react-content.svg)](https://www.npmjs.com/package/sweetalert2-react-content)
 [![Greenkeeper badge](https://badges.greenkeeper.io/sweetalert2/sweetalert2-react-content.svg)](https://greenkeeper.io/)
