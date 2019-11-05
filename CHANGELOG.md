@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.1.0...v2.0.0) (2019-11-05)
+
+
+* BREAKING CHANGE: sweetalert2 v9 ([519bcd8](https://github.com/sweetalert2/sweetalert2-react-content/commit/519bcd8da7fa86f7a692979484d5b23f94053518))
+
+
+### BREAKING CHANGES
+
+* sweetalert2 v9
+
 # [1.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.0.3...v1.1.0) (2019-03-23)
 
 
