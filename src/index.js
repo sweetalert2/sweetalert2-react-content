@@ -10,7 +10,7 @@ export default function withReactContent(ParentSwal) {
     static argsToParams(args) {
       if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
         const params = {}
-        ;['title', 'html', 'type'].forEach((name, index) => {
+        ;['title', 'html', 'icon'].forEach((name, index) => {
           if (args[index] !== undefined) {
             params[name] = args[index]
           }
