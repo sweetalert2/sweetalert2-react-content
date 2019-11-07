@@ -27,7 +27,7 @@ describe('integration', () => {
       footer: <span>footer</span>,
       onOpen: () => {
         expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
-        expect(MySwal.getContent().innerHTML).toEqual('<span>html</span>')
+        expect(getSwalContentContent().innerHTML).toEqual('<span>html</span>')
         expect(MySwal.getConfirmButton().innerHTML).toEqual(
           '<span>confirmButtonText</span>',
         )
@@ -70,7 +70,7 @@ describe('integration', () => {
     const swal = MySwal.fire(<span>title</span>, <span>html</span>, 'info')
     await timeout(100)
     expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
-    expect(MySwal.getContent().innerHTML).toEqual('<span>html</span>')
+    expect(getSwalContentContent().innerHTML).toEqual('<span>html</span>')
     expect(getVisibleSwalIconNames()).toEqual(['info'])
     MySwal.clickConfirm()
     await swal

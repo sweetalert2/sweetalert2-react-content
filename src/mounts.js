@@ -5,7 +5,7 @@ export const mounts = [
   },
   {
     key: 'html',
-    getter: swal => swal.getContent(),
+    getter: swal => swal.getContent().querySelector('#swal2-content'),
   },
   {
     key: 'confirmButtonText',
