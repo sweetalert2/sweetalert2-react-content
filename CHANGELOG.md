@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v2.0.0...v2.0.1) (2019-11-07)
+
+
+### Bug Fixes
+
+* **dom:** mount html content inside element used for html content ([#58](https://github.com/sweetalert2/sweetalert2-react-content/issues/58)) ([3101894](https://github.com/sweetalert2/sweetalert2-react-content/commit/3101894feffa57153a88c4657a6ec738a212f75b))
+
 # [2.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v1.1.0...v2.0.0) (2019-11-05)
 
 
