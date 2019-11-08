@@ -4,6 +4,7 @@ import React from 'react'
 import withReactContent from '../src/index'
 import {
   Swal,
+  SwalWithoutAnimation,
   cleanSwalState,
   getSwalContentContent,
   getVisibleSwalIconNames,
@@ -17,9 +18,8 @@ describe('integration', () => {
   })
   it('renders React elements for each supported option', async () => {
     await cleanSwalState()
-    const MySwal = withReactContent(Swal)
+    const MySwal = withReactContent(SwalWithoutAnimation)
     await MySwal.fire({
-      animation: false,
       title: <span>title</span>,
       html: <span>html</span>,
       confirmButtonText: <span>confirmButtonText</span>,
@@ -41,9 +41,8 @@ describe('integration', () => {
   })
   it('can mix React and non-React params', async () => {
     await cleanSwalState()
-    const MySwal = withReactContent(Swal)
+    const MySwal = withReactContent(SwalWithoutAnimation)
     await MySwal.fire({
-      animation: false,
       title: <span>React element</span>,
       footer: 'plain text',
       onOpen: () => {
