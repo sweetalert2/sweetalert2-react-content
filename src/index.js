@@ -5,9 +5,9 @@ import { mounts } from './mounts'
 const noop = () => {}
 const error = message => new Error(`sweetalert2-react-content: ${message}`)
 
-export default function withReactContent(ParentSwal) {
+export default function withReactContent (ParentSwal) {
   return class extends ParentSwal {
-    static argsToParams(args) {
+    static argsToParams (args) {
       if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
         const params = {}
         ;['title', 'html', 'icon'].forEach((name, index) => {
@@ -20,7 +20,8 @@ export default function withReactContent(ParentSwal) {
         return ParentSwal.argsToParams(args)
       }
     }
-    _main(params) {
+
+    _main (params) {
       params = Object.assign({}, params)
 
       params.onOpen = params.onOpen || noop
@@ -50,7 +51,8 @@ export default function withReactContent(ParentSwal) {
 
       return super._main(params)
     }
-    update() {
+
+    update () {
       throw error(
         'Swal.update() is not yet supported. See https://github.com/sweetalert2/sweetalert2-react-content/issues/73',
       )

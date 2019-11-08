@@ -10,19 +10,19 @@ const SwalWithoutAnimation = Swal.mixin({
   },
 })
 
-async function cleanSwalState() {
+async function cleanSwalState () {
   await SwalWithoutAnimation.fire({
     title: 'clear',
     onOpen: () => Swal.clickConfirm(),
   })
 }
 
-function getSwalContentContent() {
+function getSwalContentContent () {
   const content = Swal.getContent()
   return content && content.querySelector('#swal2-content')
 }
 
-function getVisibleSwalIconNames() {
+function getVisibleSwalIconNames () {
   return ['success', 'error', 'warning', 'info', 'question'].filter(name => {
     const iconElement = window.document.querySelector(
       `.swal2-icon.swal2-${name}`,
