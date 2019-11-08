@@ -1,8 +1,17 @@
 import Swal from 'sweetalert2/dist/sweetalert2' // js-only, no styles
 
+const SwalWithoutAnimation = Swal.mixin({
+  showClass: {
+    popup: '',
+    bakdrop: ''
+  },
+  hideClass: {
+    popup: ''
+  },
+})
+
 async function cleanSwalState() {
-  await Swal.fire({
-    animation: false,
+  await SwalWithoutAnimation.fire({
     title: 'clear',
     onOpen: () => Swal.clickConfirm(),
   })
@@ -22,4 +31,4 @@ function getVisibleSwalIconNames() {
   })
 }
 
-export { Swal, cleanSwalState, getSwalContentContent, getVisibleSwalIconNames }
+export { Swal, SwalWithoutAnimation, cleanSwalState, getSwalContentContent, getVisibleSwalIconNames }
