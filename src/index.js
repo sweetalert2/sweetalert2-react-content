@@ -35,15 +35,15 @@ export default function withReactContent (ParentSwal) {
           let domElement
 
           const superOnOpen = params.onOpen
-          params.onOpen = () => {
+          params.onOpen = (element) => {
             domElement = getter(ParentSwal)
             ReactDOM.render(reactElement, domElement)
-            superOnOpen()
+            superOnOpen(element)
           }
 
           const superOnClose = params.onClose
-          params.onClose = () => {
-            superOnClose()
+          params.onClose = (element) => {
+            superOnClose(element)
             ReactDOM.unmountComponentAtNode(domElement)
           }
         }
