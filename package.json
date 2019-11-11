@@ -8,13 +8,12 @@
   "types": "src/sweetalert2-react-content.d.ts",
   "files": [
     "dist/**/*",
-    "src/**/*.{js,d.ts}",
-    "CHANGELOG.md"
+    "src/**/*.{js,d.ts}"
   ],
   "scripts": {
     "start": "jest --watch --notify",
     "check-dts": "tsc src/sweetalert2-react-content.d.ts --lib dom,es6",
-    "lint": "eslint src test",
+    "lint": "eslint src/**/*.{js,d.ts} test",
     "test-only": "jest --ci",
     "test": "npm run check-dts && npm run lint && npm run test-only",
     "build": "rollup --config",
