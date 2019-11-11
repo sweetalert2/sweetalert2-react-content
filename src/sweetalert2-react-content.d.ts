@@ -1,5 +1,5 @@
-import { ReactElement } from 'react';
-import swal, { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweetalert2';
+import { ReactElement } from 'react'
+import swal, { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweetalert2'
 
 /**
  * Wraps SweetAlert2 implementation with a compatible implementation that supports React elements.
@@ -14,7 +14,7 @@ import swal, { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweet
  *
  * @returns A SweetAlert2-compatible interface with React capabilities added.
  */
-export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 & ReactSweetAlert;
+export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 & ReactSweetAlert
 
 /**
  * Mimics SweetAlert2's call signatures, adding React elements as valid inputs.
