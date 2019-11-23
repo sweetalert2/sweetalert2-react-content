@@ -17,11 +17,6 @@ async function cleanSwalState () {
   })
 }
 
-function getSwalContentContent () {
-  const content = Swal.getContent()
-  return content && content.querySelector('#swal2-content')
-}
-
 function getVisibleSwalIconNames () {
   return ['success', 'error', 'warning', 'info', 'question'].filter(name => {
     const iconElement = window.document.querySelector(
@@ -31,4 +26,4 @@ function getVisibleSwalIconNames () {
   })
 }
 
-export { Swal, SwalWithoutAnimation, cleanSwalState, getSwalContentContent, getVisibleSwalIconNames }
+export { Swal, SwalWithoutAnimation, cleanSwalState, getVisibleSwalIconNames }
