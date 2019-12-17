@@ -13,7 +13,7 @@ import { timeout } from './util/util'
 describe('integration', () => {
   beforeAll(async () => {
     // jest doesn't implement `window.scrollTo` so we need to mock it
-    window.scrollTo = () => {}
+    window.scrollTo = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
   })
   it('renders React elements for each supported option', async () => {
     await cleanSwalState()
