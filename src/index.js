@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { mounts } from './mounts'
 
-const noop = () => {}
+const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 const error = message => new Error(`sweetalert2-react-content: ${message}`)
 
 export default function withReactContent (ParentSwal) {
