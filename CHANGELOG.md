@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v2.0.2...v3.0.0) (2020-01-27)
+
+
+* BREAKING CHANGE: fix: Unmount React content only once popup is destroyed (#107) ([2061d64](https://github.com/sweetalert2/sweetalert2-react-content/commit/2061d6485346afb958f07a3c4f76c1f74d76c2fb)), closes [#107](https://github.com/sweetalert2/sweetalert2-react-content/issues/107)
+
+
+### BREAKING CHANGES
+
+* fix: Unmount React content only once popup is destroyed (#107)
+
 ## [2.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v2.0.1...v2.0.2) (2019-11-08)
 
 
