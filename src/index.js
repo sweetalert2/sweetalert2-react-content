@@ -25,7 +25,7 @@ export default function withReactContent (ParentSwal) {
       params = Object.assign({}, params)
 
       params.onOpen = params.onOpen || noop
-      params.onClose = params.onClose || noop
+      params.onDestroy = params.onDestroy || noop
 
       mounts.forEach(({ key, getter }) => {
         if (React.isValidElement(params[key])) {
@@ -41,9 +41,9 @@ export default function withReactContent (ParentSwal) {
             superOnOpen(element)
           }
 
-          const superOnClose = params.onClose
-          params.onClose = (element) => {
-            superOnClose(element)
+          const superOnDestroy = params.onDestroy
+          params.onDestroy = (element) => {
+            superOnDestroy(element)
             ReactDOM.unmountComponentAtNode(domElement)
           }
         }
