@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.0...v3.0.1) (2020-02-20)
+
+
+### Bug Fixes
+
+* unmountComponentAtNode(...): Target container is not a DOM elementd fyf ([#108](https://github.com/sweetalert2/sweetalert2-react-content/issues/108)) ([c592b0c](https://github.com/sweetalert2/sweetalert2-react-content/commit/c592b0c73c15554d30ae5e5ad36eb442ee647c02))
+
 # [3.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v2.0.2...v3.0.0) (2020-01-27)
 
 
