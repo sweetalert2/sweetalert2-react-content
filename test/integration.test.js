@@ -53,7 +53,7 @@ describe('integration', () => {
       },
     })
   })
-  it('fire twice without crashing', async () => {
+  it('can fire twice without crashing', async () => {
     await cleanSwalState()
     const MySwal = withReactContent(SwalWithoutAnimation)
     MySwal.fire({

@@ -44,9 +44,7 @@ export default function withReactContent (ParentSwal) {
           const superOnDestroy = params.onDestroy
           params.onDestroy = (element) => {
             superOnDestroy(element)
-            if (domElement) {
-              ReactDOM.unmountComponentAtNode(domElement)
-            }
+            ReactDOM.unmountComponentAtNode(domElement)
           }
         }
       })
