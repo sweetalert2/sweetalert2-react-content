@@ -53,6 +53,25 @@ describe('integration', () => {
       },
     })
   })
+  it('can fire twice without crashing', async () => {
+    await cleanSwalState()
+    const MySwal = withReactContent(SwalWithoutAnimation)
+    MySwal.fire({
+      title: <span>React element</span>,
+      footer: 'plain text'
+    })
+    await MySwal.fire({
+      title: <span>React element</span>,
+      footer: 'plain text',
+      onOpen: () => {
+        expect(MySwal.getTitle().innerHTML).toEqual(
+          '<span>React element</span>',
+        )
+        expect(MySwal.getFooter().innerHTML).toEqual('plain text')
+        MySwal.clickConfirm()
+      },
+    })
+  })
   it('returns a class with the same instance & static properties as Swal', async () => {
     const MySwal = withReactContent(Swal)
     Object.keys(Swal).forEach(key => {
