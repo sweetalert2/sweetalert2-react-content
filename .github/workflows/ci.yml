@@ -33,10 +33,3 @@ jobs:
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-
-  skip:
-    if: "contains(github.event.commits[0].message, '[skip ci]')"
-    runs-on: ubuntu-latest
-    steps:
-      - name: skip ci
-        run: echo "skip ci"
