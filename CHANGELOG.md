@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.1...v3.0.2) (2020-07-12)
+
+
+### Bug Fixes
+
+* remove useRejections ([#118](https://github.com/sweetalert2/sweetalert2-react-content/issues/118)) ([f08301d](https://github.com/sweetalert2/sweetalert2-react-content/commit/f08301d2ab46ed81d1a96c738c897c9e010c7093))
+
 ## [3.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.0...v3.0.1) (2020-02-20)
 
 
