@@ -29,7 +29,7 @@ jobs:
         sudo npm i -g semantic-release@16.0.0-beta.31 @semantic-release/changelog@3 @semantic-release/exec@3.4.0-beta.6 @semantic-release/git@7.1.0-beta.8
         semantic-release
 
-    - name: Report coverage to coveralls.io
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Report coverage to coveralls.io
+    #   uses: coverallsapp/github-action@master
+    #   with:
+    #     github-token: ${{ secrets.GITHUB_TOKEN }}
