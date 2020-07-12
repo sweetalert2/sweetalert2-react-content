@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.2...v3.0.3) (2020-07-12)
+
+
+### Bug Fixes
+
+* update typescript declaration file for TS 3.9.5 ([#119](https://github.com/sweetalert2/sweetalert2-react-content/issues/119)) ([757ab23](https://github.com/sweetalert2/sweetalert2-react-content/commit/757ab237cb60fe076a848313058f3e5749ad66e8))
+
 ## [3.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.1...v3.0.2) (2020-07-12)
 
 
