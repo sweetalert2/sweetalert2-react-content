@@ -23,6 +23,10 @@ interface ReactSweetAlert {
   (title?: ReactElementOr<'title'>, message?: ReactElementOr<'html'>, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
 
   (options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
+
+  fire(title?: ReactElementOr<'title'>, message?: ReactElementOr<'html'>, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
+
+  fire(options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
 }
 
 type SweetAlert2 = typeof swal;
