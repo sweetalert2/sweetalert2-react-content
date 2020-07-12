@@ -21,15 +21,18 @@ jobs:
       run: yarn test
 
     - name: Run automated release process with semantic-release
-      if: github.event_name == 'push' && contains(github.ref, 'master')
+      if: github.event_name == 'push'
+      uses: cycjimmy/semantic-release-action@v2
+      with:
+        extra_plugins: |
+          @semantic-release/changelog
+          @semantic-release/git
+          @semantic-release/exec
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: |
-        sudo npm i -g semantic-release@16.0.0-beta.31 @semantic-release/changelog@3 @semantic-release/exec@3.4.0-beta.6 @semantic-release/git@7.1.0-beta.8
-        semantic-release
 
-    - name: Report coverage to coveralls.io
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+    # - name: Report coverage to coveralls.io
+    #   uses: coverallsapp/github-action@master
+    #   with:
+    #     github-token: ${{ secrets.GITHUB_TOKEN }}
