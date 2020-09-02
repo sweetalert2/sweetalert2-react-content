@@ -19,4 +19,8 @@ export const mounts = [
     key: 'footer',
     getter: swal => swal.getFooter(),
   },
+  {
+    key: 'closeButtonHtml',
+    getter: swal => swal.getCloseButton(),
+  },
 ]
