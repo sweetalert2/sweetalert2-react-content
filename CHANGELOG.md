@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.3...v3.1.0) (2020-09-02)
+
+
+### Features
+
+* add closeButtonHtml mount ([#121](https://github.com/sweetalert2/sweetalert2-react-content/issues/121)) ([ca88cf4](https://github.com/sweetalert2/sweetalert2-react-content/commit/ca88cf49a5a3c2e683eb9ed0fba8e01b5be94d6a))
+
 ## [3.0.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.2...v3.0.3) (2020-07-12)
 
 
