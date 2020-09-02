@@ -17,6 +17,7 @@ The following options can be React elements:
  - confirmButtonText
  - cancelButtonText
  - footer
+ - closeButtonHtml
 
 ## Installation
 
