@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.1.0...v3.2.0) (2020-09-08)
+
+
+### Features
+
+* add denyButtonText mount, support SweetAlert2 v10 🚀 ([#124](https://github.com/sweetalert2/sweetalert2-react-content/issues/124)) ([0fcfee7](https://github.com/sweetalert2/sweetalert2-react-content/commit/0fcfee7beb15859731a8c2700b3e9bd7bfad2694))
+
 # [3.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.0.3...v3.1.0) (2020-09-02)
 
 
