@@ -12,6 +12,10 @@ export const mounts = [
     getter: swal => swal.getConfirmButton(),
   },
   {
+    key: 'denyButtonText',
+    getter: swal => swal.getDenyButton(),
+  },
+  {
     key: 'cancelButtonText',
     getter: swal => swal.getCancelButton(),
   },
