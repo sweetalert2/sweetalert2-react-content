@@ -15,6 +15,7 @@ The following options can be React elements:
  - title
  - html
  - confirmButtonText
+ - denyButtonText
  - cancelButtonText
  - footer
  - closeButtonHtml
