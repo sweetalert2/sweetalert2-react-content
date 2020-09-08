@@ -22,6 +22,7 @@ describe('integration', () => {
       title: <span>title</span>,
       html: <span>html</span>,
       confirmButtonText: <span>confirmButtonText</span>,
+      denyButtonText: <span>denyButtonText</span>,
       cancelButtonText: <span>cancelButtonText</span>,
       closeButtonHtml: <span>closeButtonHtml</span>,
       footer: <span>footer</span>,
@@ -30,6 +31,9 @@ describe('integration', () => {
         expect(MySwal.getHtmlContainer().innerHTML).toEqual('<span>html</span>')
         expect(MySwal.getConfirmButton().innerHTML).toEqual(
           '<span>confirmButtonText</span>',
+        )
+        expect(MySwal.getDenyButton().innerHTML).toEqual(
+          '<span>denyButtonText</span>',
         )
         expect(MySwal.getCancelButton().innerHTML).toEqual(
           '<span>cancelButtonText</span>',
