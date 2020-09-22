@@ -13,7 +13,7 @@ const SwalWithoutAnimation = Swal.mixin({
 async function cleanSwalState () {
   await SwalWithoutAnimation.fire({
     title: 'clear',
-    onOpen: () => Swal.clickConfirm(),
+    didOpen: () => Swal.clickConfirm(),
   })
 }
 
