@@ -24,9 +24,6 @@ export default function withReactContent (ParentSwal) {
     _main (params) {
       params = Object.assign({}, params)
 
-      params.didOpen = params.didOpen || noop
-      params.didDestroy = params.didDestroy || noop
-
       mounts.forEach(({ key, getter }) => {
         if (React.isValidElement(params[key])) {
           const reactElement = params[key]
@@ -34,16 +31,18 @@ export default function withReactContent (ParentSwal) {
 
           let domElement
 
-          const superDidOpen = params.didOpen
-          params.didOpen = (element) => {
+          const openHookName = params.onOpen || !ParentSwal.isValidParameter('didOpen') ? 'onOpen' : 'didOpen' // support legacy onOpen hook
+          const superOpenHook = params[openHookName] || noop
+          params[openHookName] = (element) => {
             domElement = getter(ParentSwal)
             ReactDOM.render(reactElement, domElement)
-            superDidOpen(element)
+            superOpenHook(element)
           }
 
-          const superDidDestroy = params.didDestroy
-          params.didDestroy = (element) => {
-            superDidDestroy(element)
+          const destroyHookName = params.onDestroy || !ParentSwal.isValidParameter('didDestroy') ? 'onDestroy' : 'didDestroy' // support legacy onDestroy hook
+          const superDestroyHook = params[destroyHookName] || noop
+          params[destroyHookName] = (element) => {
+            superDestroyHook(element)
             if (domElement) {
               ReactDOM.unmountComponentAtNode(domElement)
             }
