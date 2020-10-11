@@ -44,12 +44,12 @@ export default [false, true].map(minify => {
         format: 'umd',
         name: 'sweetalert2ReactContent',
         globals: {
-          react: 'React',
+          'react': 'React',
           'react-dom': 'ReactDOM',
         },
       },
     ].map(({ format, ...rest }) => {
-      const fileExt = format + (minify ? '.min' : '') + '.js'
+      const fileExt = `${format + (minify ? '.min' : '')}.js`
       const file = `dist/sweetalert2-react-content.${fileExt}`
       return {
         format,
