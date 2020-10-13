@@ -26,7 +26,7 @@ describe('integration', () => {
       cancelButtonText: <span>cancelButtonText</span>,
       closeButtonHtml: <span>closeButtonHtml</span>,
       footer: <span>footer</span>,
-      onOpen: () => {
+      didOpen: () => {
         expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
         expect(MySwal.getHtmlContainer().innerHTML).toEqual('<span>html</span>')
         expect(MySwal.getConfirmButton().innerHTML).toEqual(
@@ -50,7 +50,7 @@ describe('integration', () => {
     await MySwal.fire({
       title: <span>React element</span>,
       footer: 'plain text',
-      onOpen: () => {
+      didOpen: () => {
         expect(MySwal.getTitle().innerHTML).toEqual(
           '<span>React element</span>',
         )
@@ -69,7 +69,7 @@ describe('integration', () => {
     await MySwal.fire({
       title: <span>React element</span>,
       footer: 'plain text',
-      onOpen: () => {
+      didOpen: () => {
         expect(MySwal.getTitle().innerHTML).toEqual(
           '<span>React element</span>',
         )
