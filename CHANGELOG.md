@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.2.0...v3.2.1) (2020-10-13)
+
+
+### Bug Fixes
+
+* use didOpen and didDestroy instead of deprecated onOpen and onDestroy ([#126](https://github.com/sweetalert2/sweetalert2-react-content/issues/126)) ([ce0f62d](https://github.com/sweetalert2/sweetalert2-react-content/commit/ce0f62dd61d99b6afb00351b06cf0d2baeda3d04))
+
 # [3.2.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.1.0...v3.2.0) (2020-09-08)
 
 
