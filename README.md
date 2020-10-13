@@ -37,7 +37,7 @@ const MySwal = withReactContent(Swal)
 MySwal.fire({
   title: <p>Hello World</p>,
   footer: 'Copyright 2018',
-  onOpen: () => {
+  didOpen: () => {
     // `MySwal` is a subclass of `Swal`
     //   with all the same instance & static methods
     MySwal.clickConfirm()
