@@ -1,5 +1,5 @@
 /* eslint-env jest */
-
+/* eslint-disable no-use-before-define */
 import React from 'react'
 import withReactContent from '../src/index'
 import {
