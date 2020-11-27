@@ -1,3 +1,10 @@
+## [3.2.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.2.1...v3.2.2) (2020-11-27)
+
+
+### Bug Fixes
+
+* support React 17 ([#142](https://github.com/sweetalert2/sweetalert2-react-content/issues/142)) ([16981ab](https://github.com/sweetalert2/sweetalert2-react-content/commit/16981ab31cc91f3c3213a03c61cea93ac14e2fa5))
+
 ## [3.2.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.2.0...v3.2.1) (2020-10-13)
 
 
