@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
-  <script src="../node_modules/react/umd/react.production.min.js"></script>
-  <script src="../node_modules/react-dom/umd/react-dom.production.min.js"></script>
+  <script src="../node_modules/react/umd/react.development.js"></script>
+  <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
   <script src="../dist/sweetalert2-react-content.umd.js"></script>
 </head>
 <body>
@@ -13,7 +13,9 @@
   let MySwal = withReactContent(Swal)
   Promise.resolve().then(async () => {
     await MySwal.fire({
-      title: React.createElement('i', {}, ['Hello World']),
+      icon: 'success',
+      iconHtml: React.createElement('b', {key: 'iconHtml'}, ['P']),
+      title: React.createElement('i', {key: 'title'}, ['Hello World']),
       didOpen: (popup) => {
         console.log('didOpen', popup)
       },

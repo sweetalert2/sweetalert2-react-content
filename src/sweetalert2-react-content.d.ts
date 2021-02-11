@@ -40,8 +40,11 @@ interface ReactOptions {
   title?: ReactElementOr<'title'>;
   html?: ReactElementOr<'html'>;
   confirmButtonText?: ReactElementOr<'confirmButtonText'>;
+  denyButtonText?: ReactElementOr<'denyButtonText'>;
   cancelButtonText?: ReactElementOr<'cancelButtonText'>;
   footer?: ReactElementOr<'footer'>;
+  closeButtonHtml?: ReactElementOr<'closeButtonHtml'>;
+  iconHtml?: ReactElementOr<'iconHtml'>;
 }
 
 // Overwrite<T, U> will take the properties of U and add to it the properties of T that are not in U.

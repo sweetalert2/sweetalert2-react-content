@@ -26,7 +26,7 @@ export default function withReactContent (ParentSwal) {
 
       mounts.forEach(({ key, getter }) => {
         if (React.isValidElement(params[key])) {
-          const reactElement = params[key]
+          let reactElement = params[key]
           params[key] = ' '
 
           let domElement
@@ -35,7 +35,10 @@ export default function withReactContent (ParentSwal) {
           const superOpenHook = params[openHookName] || noop
           params[openHookName] = (element) => {
             domElement = getter(ParentSwal)
-            ReactDOM.render(reactElement, domElement)
+            if (key === 'iconHtml') {
+              reactElement = React.createElement('div', { className: 'swal2-icon-content' }, [reactElement])
+            }
+            domElement && ReactDOM.render(reactElement, domElement)
             superOpenHook(element)
           }
 
