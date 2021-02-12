@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.2.2...v3.3.0) (2021-02-12)
+
+
+### Features
+
+* add iconHtml mount ([#147](https://github.com/sweetalert2/sweetalert2-react-content/issues/147)) ([8dd92fa](https://github.com/sweetalert2/sweetalert2-react-content/commit/8dd92fa625d23e0ae693da32fe52829d217a4a39))
+
 ## [3.2.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.2.1...v3.2.2) (2020-11-27)
 
 
