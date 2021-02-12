@@ -35,7 +35,7 @@ export default function withReactContent (ParentSwal) {
           const superOpenHook = params[openHookName] || noop
           params[openHookName] = (element) => {
             domElement = getter(ParentSwal)
-            ReactDOM.render(reactElement, domElement)
+            domElement && ReactDOM.render(reactElement, domElement)
             superOpenHook(element)
           }
 

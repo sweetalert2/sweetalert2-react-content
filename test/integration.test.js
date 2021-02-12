@@ -21,6 +21,8 @@ describe('integration', () => {
     await MySwal.fire({
       title: <span>title</span>,
       html: <span>html</span>,
+      icon: 'success',
+      iconHtml: <span>@</span>,
       confirmButtonText: <span>confirmButtonText</span>,
       denyButtonText: <span>denyButtonText</span>,
       cancelButtonText: <span>cancelButtonText</span>,
@@ -37,6 +39,9 @@ describe('integration', () => {
         )
         expect(MySwal.getCancelButton().innerHTML).toEqual(
           '<span>cancelButtonText</span>',
+        )
+        expect(MySwal.getIcon().innerHTML).toEqual(
+          '<div class="swal2-icon-content"><span>@</span></div>',
         )
         expect(MySwal.getFooter().innerHTML).toEqual('<span>footer</span>')
         expect(MySwal.getCloseButton().innerHTML).toEqual('<span>closeButtonHtml</span>')
