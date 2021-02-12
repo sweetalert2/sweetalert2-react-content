@@ -29,6 +29,15 @@ export const mounts = [
   },
   {
     key: 'iconHtml',
-    getter: swal => swal.getIcon(),
+    getter: swal => {
+      const icon = swal.getIcon()
+      if (icon) {
+        const iconContent = document.createElement('div')
+        iconContent.className = 'swal2-icon-content'
+        icon.appendChild(iconContent)
+        return iconContent
+      }
+      return null
+    },
   },
 ]
