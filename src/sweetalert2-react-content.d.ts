@@ -21,11 +21,11 @@ export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 
  * Mimics SweetAlert2's call signatures, adding React elements as valid inputs.
  */
 interface ReactSweetAlert {
-  (title?: ReactElementOr<'title'>, message?: ReactElementOr<'html'>, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
+  (title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
 
   (options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
 
-  fire(title?: ReactElementOr<'title'>, message?: ReactElementOr<'html'>, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
+  fire(title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
 
   fire(options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
 }
