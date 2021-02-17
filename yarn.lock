@@ -5143,10 +5143,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-sweetalert2@^10.0.0:
-  version "10.14.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.14.1.tgz#224151f9bc7fa4677ce1e0f52813157b14d28650"
-  integrity sha512-DI0XsgWSvcMxf58m5FoME9UCPiI5MV+ms819+d5Xly6Z1HvQaQ4sASrcA915g+ow1lsYUnfQLtByqIiosEGd/Q==
+sweetalert2@^10.15.1:
+  version "10.15.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.15.1.tgz#03362e743becbc8f608f7b6ec6e0c623f4828638"
+  integrity sha512-TEORDjJGD3956aPK61DpHvgT8sHisQHPdsqXlYzWmza/oMAsrVj+RyYpAOD45ew3RBrGzjQ1uNq6m4FjZ0WLZg==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
