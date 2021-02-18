@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.0...v3.3.1) (2021-02-18)
+
+
+### Bug Fixes
+
+* improve DX with types ([#148](https://github.com/sweetalert2/sweetalert2-react-content/issues/148)) ([328fcbb](https://github.com/sweetalert2/sweetalert2-react-content/commit/328fcbb9ac5fbc95b1155004732257ab61e6817f))
+
 # [3.3.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.2.2...v3.3.0) (2021-02-12)
 
 

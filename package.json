@@ -1,6 +1,6 @@
 {
   "name": "sweetalert2-react-content",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "Official sweetalert2 enhancer adding support for React elements as content.",
   "main": "dist/sweetalert2-react-content.cjs.js",
   "module": "dist/sweetalert2-react-content.es.js",
