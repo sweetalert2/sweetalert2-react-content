@@ -29,6 +29,6 @@ export const mounts = [
   },
   {
     key: 'iconHtml',
-    getter: swal => swal.getIcon() ? swal.getIcon().querySelector('.swal2-icon-content') : null,
+    getter: swal => swal.getIcon().querySelector('.swal2-icon-content'),
   },
 ]
