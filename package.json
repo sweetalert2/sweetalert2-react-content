@@ -45,7 +45,7 @@
     "sweetalert2": "^9.7.0 || ^10.15.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.13",
+    "@babel/core": "^7.13.14",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
@@ -59,7 +59,7 @@
     "npm-run-all": "^4.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "rollup": "^2.42.4",
+    "rollup": "^2.44.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.0",
