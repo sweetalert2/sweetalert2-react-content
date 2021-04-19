@@ -59,12 +59,12 @@
     "npm-run-all": "^4.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "rollup": "^2.45.1",
+    "rollup": "^2.45.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "sweetalert2": "^10.16.0",
+    "sweetalert2": "^10.16.3",
     "typescript": "^4.2.4"
   },
   "jest": {
