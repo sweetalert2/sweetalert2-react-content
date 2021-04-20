@@ -21,8 +21,8 @@ export default function withReactContent (ParentSwal) {
       }
     }
 
-    _main (params) {
-      params = Object.assign({}, params)
+    _main (params, mixinParams) {
+      params = Object.assign({}, mixinParams, params)
 
       mounts.forEach(({ key, getter }) => {
         if (React.isValidElement(params[key])) {
@@ -50,7 +50,7 @@ export default function withReactContent (ParentSwal) {
         }
       })
 
-      return super._main(params)
+      return super._main(params, mixinParams)
     }
 
     update () {
