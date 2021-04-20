@@ -15,39 +15,50 @@ describe('integration', () => {
     // jest doesn't implement `window.scrollTo` so we need to mock it
     window.scrollTo = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
   })
-  it('renders React elements for each supported option', async () => {
-    await cleanSwalState()
-    const MySwal = withReactContent(SwalWithoutAnimation)
-    await MySwal.fire({
-      title: <span>title</span>,
-      html: <span>html</span>,
-      icon: 'success',
-      iconHtml: <span>@</span>,
-      confirmButtonText: <span>confirmButtonText</span>,
-      denyButtonText: <span>denyButtonText</span>,
-      cancelButtonText: <span>cancelButtonText</span>,
-      closeButtonHtml: <span>closeButtonHtml</span>,
-      footer: <span>footer</span>,
-      didOpen: () => {
-        expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
-        expect(MySwal.getHtmlContainer().innerHTML).toEqual('<span>html</span>')
-        expect(MySwal.getConfirmButton().innerHTML).toEqual(
-          '<span>confirmButtonText</span>',
-        )
-        expect(MySwal.getDenyButton().innerHTML).toEqual(
-          '<span>denyButtonText</span>',
-        )
-        expect(MySwal.getCancelButton().innerHTML).toEqual(
-          '<span>cancelButtonText</span>',
-        )
-        expect(MySwal.getIcon().innerHTML).toEqual(
-          '<div class="swal2-icon-content"><span>@</span></div>',
-        )
-        expect(MySwal.getFooter().innerHTML).toEqual('<span>footer</span>')
-        expect(MySwal.getCloseButton().innerHTML).toEqual('<span>closeButtonHtml</span>')
-        MySwal.clickConfirm()
-      },
+  describe('rendering React elements for each supported option', () => {
+    beforeEach(async () => cleanSwalState())
+    it('works via .fire', async () => {
+      const MySwal = withReactContent(SwalWithoutAnimation)
+      await MySwal.fire({
+        ...getReactOptions(),
+        didOpen: () => {
+          checkReactOptions(MySwal)
+          MySwal.clickConfirm()
+        },
+      })
     })
+    it('works via .mixin', async () => {
+      const MySwal = withReactContent(SwalWithoutAnimation)
+      const MyConfiguredSwal = MySwal.mixin({ ...getReactOptions() })
+      await MyConfiguredSwal.fire({
+        didOpen: () => {
+          checkReactOptions(MySwal)
+          MySwal.clickConfirm()
+        },
+      })
+    })
+    function getReactOptions () {
+      return {
+        title: <span>title</span>,
+        html: <span>html</span>,
+        iconHtml: <span>@</span>,
+        confirmButtonText: <span>confirmButtonText</span>,
+        denyButtonText: <span>denyButtonText</span>,
+        cancelButtonText: <span>cancelButtonText</span>,
+        closeButtonHtml: <span>closeButtonHtml</span>,
+        footer: <span>footer</span>,
+      }
+    }
+    function checkReactOptions (MySwal) {
+      expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
+      expect(MySwal.getHtmlContainer().innerHTML).toEqual('<span>html</span>')
+      expect(MySwal.getConfirmButton().innerHTML).toEqual('<span>confirmButtonText</span>')
+      expect(MySwal.getDenyButton().innerHTML).toEqual('<span>denyButtonText</span>')
+      expect(MySwal.getCancelButton().innerHTML).toEqual('<span>cancelButtonText</span>')
+      expect(MySwal.getIcon().innerHTML).toEqual('<div class="swal2-icon-content"><span>@</span></div>')
+      expect(MySwal.getFooter().innerHTML).toEqual('<span>footer</span>')
+      expect(MySwal.getCloseButton().innerHTML).toEqual('<span>closeButtonHtml</span>')
+    }
   })
   it('can mix React and non-React params', async () => {
     await cleanSwalState()
