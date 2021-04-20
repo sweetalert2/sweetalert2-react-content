@@ -1,3 +1,10 @@
+## [3.3.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.1...v3.3.2) (2021-04-20)
+
+
+### Bug Fixes
+
+* passing react elements via .mixin ([#153](https://github.com/sweetalert2/sweetalert2-react-content/issues/153)) ([c2e4d76](https://github.com/sweetalert2/sweetalert2-react-content/commit/c2e4d76134a1b1d1f14c3f0b692f4d1306f609c7)), closes [#152](https://github.com/sweetalert2/sweetalert2-react-content/issues/152)
+
 ## [3.3.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.0...v3.3.1) (2021-02-18)
 
 
