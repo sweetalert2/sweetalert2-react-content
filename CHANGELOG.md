@@ -1,3 +1,10 @@
+## [3.3.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.2...v3.3.3) (2021-05-16)
+
+
+### Bug Fixes
+
+* support sweetalert2@v11 ([87350d0](https://github.com/sweetalert2/sweetalert2-react-content/commit/87350d0009b00ccd0eff31fb407cfaaa30c25651))
+
 ## [3.3.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.1...v3.3.2) (2021-04-20)
 
 
