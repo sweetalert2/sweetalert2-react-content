@@ -1,3 +1,13 @@
+# [4.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.3...v4.0.0) (2021-05-17)
+
+
+* BREAKING CHANGE: Drop IE11 and legacy Edge support (#166) ([e5a0e6b](https://github.com/sweetalert2/sweetalert2-react-content/commit/e5a0e6b68ae256d5f13d46a4f09a7e72ce3e7253)), closes [#166](https://github.com/sweetalert2/sweetalert2-react-content/issues/166)
+
+
+### BREAKING CHANGES
+
+* Drop IE11 and legacy Edge support
+
 ## [3.3.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.2...v3.3.3) (2021-05-16)
 
 
