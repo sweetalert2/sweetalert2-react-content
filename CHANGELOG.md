@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.0.0...v4.0.1) (2021-05-19)
+
+
+### Bug Fixes
+
+* drop legacy hooks ([a736204](https://github.com/sweetalert2/sweetalert2-react-content/commit/a736204b6f7ed30c9079aa0187b1e46fac6bb9b8))
+
 # [4.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v3.3.3...v4.0.0) (2021-05-17)
 
 
