@@ -31,7 +31,7 @@ export default function withReactContent (ParentSwal) {
 
           let domElement
 
-          const openHookName = params.onOpen || !ParentSwal.isValidParameter('didOpen') ? 'onOpen' : 'didOpen' // support legacy onOpen hook
+          const openHookName = 'didOpen'
           const superOpenHook = params[openHookName] || noop
           params[openHookName] = (element) => {
             domElement = getter(ParentSwal)
@@ -39,7 +39,7 @@ export default function withReactContent (ParentSwal) {
             superOpenHook(element)
           }
 
-          const destroyHookName = params.onDestroy || !ParentSwal.isValidParameter('didDestroy') ? 'onDestroy' : 'didDestroy' // support legacy onDestroy hook
+          const destroyHookName = 'didDestroy'
           const superDestroyHook = params[destroyHookName] || noop
           params[destroyHookName] = (element) => {
             superDestroyHook(element)
