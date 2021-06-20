@@ -15,6 +15,7 @@
     await MySwal.fire({
       icon: 'success',
       iconHtml: React.createElement('b', {key: 'iconHtml'}, ['P']),
+      loaderHtml: React.createElement('b', {key: 'iconHtml'}, ['@']),
       title: React.createElement('i', {key: 'title'}, ['Hello World']),
       didOpen: (popup) => {
         console.log('didOpen', popup)

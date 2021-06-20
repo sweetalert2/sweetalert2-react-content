@@ -20,6 +20,7 @@ The following options can be React elements:
  - footer
  - closeButtonHtml
  - iconHtml
+ - loaderHtml
 
 ## Installation
 
