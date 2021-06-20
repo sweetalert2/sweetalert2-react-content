@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.0.1...v4.1.0) (2021-06-20)
+
+
+### Features
+
+* add loaderHtml support ([#170](https://github.com/sweetalert2/sweetalert2-react-content/issues/170)) ([ca07c1f](https://github.com/sweetalert2/sweetalert2-react-content/commit/ca07c1f83116692731a4bfb062e983ac512276c5))
+
 ## [4.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.0.0...v4.0.1) (2021-05-19)
 
 
