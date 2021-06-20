@@ -42,6 +42,7 @@ describe('integration', () => {
         title: <span>title</span>,
         html: <span>html</span>,
         iconHtml: <span>@</span>,
+        loaderHtml: <span>%</span>,
         confirmButtonText: <span>confirmButtonText</span>,
         denyButtonText: <span>denyButtonText</span>,
         cancelButtonText: <span>cancelButtonText</span>,
@@ -58,6 +59,7 @@ describe('integration', () => {
       expect(MySwal.getIcon().innerHTML).toEqual('<div class="swal2-icon-content"><span>@</span></div>')
       expect(MySwal.getFooter().innerHTML).toEqual('<span>footer</span>')
       expect(MySwal.getCloseButton().innerHTML).toEqual('<span>closeButtonHtml</span>')
+      expect(MySwal.getLoader().innerHTML).toEqual('<span>%</span>')
     }
   })
   it('can mix React and non-React params', async () => {

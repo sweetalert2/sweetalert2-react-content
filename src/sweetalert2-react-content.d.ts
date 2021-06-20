@@ -45,6 +45,7 @@ interface ReactOptions {
   footer?: ReactElementOr<'footer'>;
   closeButtonHtml?: ReactElementOr<'closeButtonHtml'>;
   iconHtml?: ReactElementOr<'iconHtml'>;
+  loaderHtml?: ReactElementOr<'loaderHtml'>;
 }
 
 // Overwrite<T, U> will take the properties of U and add to it the properties of T that are not in U.
