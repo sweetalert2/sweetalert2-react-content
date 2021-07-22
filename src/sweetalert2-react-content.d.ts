@@ -28,6 +28,8 @@ interface ReactSweetAlert {
   fire(title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
 
   fire(options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
+  
+  mixin(options: ReactSweetAlertOptions):SweetAlert2 & ReactSweetAlert;
 }
 
 type SweetAlert2 = typeof swal;
