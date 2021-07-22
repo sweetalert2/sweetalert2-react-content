@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.1.0...v4.1.1) (2021-07-22)
+
+
+### Bug Fixes
+
+* **types:** add missing types for .mixin() ([#173](https://github.com/sweetalert2/sweetalert2-react-content/issues/173)) ([2a35c97](https://github.com/sweetalert2/sweetalert2-react-content/commit/2a35c9792dc3b1ca73a8ad9047dd885acb01b2fd))
+
 # [4.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.0.1...v4.1.0) (2021-06-20)
 
 
