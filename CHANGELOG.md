@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.1.1...v4.2.0) (2021-10-18)
+
+
+### Features
+
+* support .update() method ([#179](https://github.com/sweetalert2/sweetalert2-react-content/issues/179)) ([e9ce05c](https://github.com/sweetalert2/sweetalert2-react-content/commit/e9ce05cd5523b33220ec23caeae3bf95c912591b))
+
 ## [4.1.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.1.0...v4.1.1) (2021-07-22)
 
 
