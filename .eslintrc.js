@@ -7,5 +7,8 @@ module.exports = {
     react: {
       version: 'detect',
     },
+  },
+  rules: {
+    'import/named': 'off', // todo: @limonte revisit this eslint issue
   }
 }
