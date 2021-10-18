@@ -127,4 +127,20 @@ describe('integration', () => {
     MySwal.clickConfirm()
     await swal
   })
+  it('can update params via .update()', async () => {
+    await cleanSwalState()
+    const MySwal = withReactContent(Swal)
+    const swal = MySwal.fire(<span>title</span>, <span>html</span>, 'error')
+    await timeout(100)
+    MySwal.update({
+      title: <span>new title</span>,
+      html: <span>new html</span>,
+      icon: 'success',
+    })
+    expect(MySwal.getTitle().innerHTML).toEqual('<span>new title</span>')
+    expect(MySwal.getHtmlContainer().innerHTML).toEqual('<span>new html</span>')
+    expect(getVisibleSwalIconNames()).toEqual(['success'])
+    MySwal.clickConfirm()
+    await swal
+  })
 })
