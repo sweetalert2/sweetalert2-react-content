@@ -21,37 +21,37 @@ export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 
  * Mimics SweetAlert2's call signatures, adding React elements as valid inputs.
  */
 interface ReactSweetAlert {
-  (title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
+  (title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>
 
-  (options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
+  (options: ReactSweetAlertOptions): Promise<SweetAlertResult>
 
-  fire(title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>;
+  fire(title?: ReactElement | string, message?: ReactElement | string, icon?: SweetAlertIcon): Promise<SweetAlertResult>
 
-  fire(options: ReactSweetAlertOptions): Promise<SweetAlertResult>;
+  fire(options: ReactSweetAlertOptions): Promise<SweetAlertResult>
 
-  mixin(options: ReactSweetAlertOptions):SweetAlert2 & ReactSweetAlert;
+  mixin(options: ReactSweetAlertOptions): SweetAlert2 & ReactSweetAlert
 }
 
-type SweetAlert2 = typeof swal;
+type SweetAlert2 = typeof swal
 
-type ReactSweetAlertOptions = Overwrite<SweetAlertOptions, ReactOptions>;
+type ReactSweetAlertOptions = Overwrite<SweetAlertOptions, ReactOptions>
 
-type ReactElementOr<K extends keyof SweetAlertOptions> = SweetAlertOptions[K] | ReactElement<any>;
+type ReactElementOr<K extends keyof SweetAlertOptions> = SweetAlertOptions[K] | ReactElement<any>
 
 interface ReactOptions {
-  title?: ReactElementOr<'title'>;
-  html?: ReactElementOr<'html'>;
-  confirmButtonText?: ReactElementOr<'confirmButtonText'>;
-  denyButtonText?: ReactElementOr<'denyButtonText'>;
-  cancelButtonText?: ReactElementOr<'cancelButtonText'>;
-  footer?: ReactElementOr<'footer'>;
-  closeButtonHtml?: ReactElementOr<'closeButtonHtml'>;
-  iconHtml?: ReactElementOr<'iconHtml'>;
-  loaderHtml?: ReactElementOr<'loaderHtml'>;
+  title?: ReactElementOr<'title'>
+  html?: ReactElementOr<'html'>
+  confirmButtonText?: ReactElementOr<'confirmButtonText'>
+  denyButtonText?: ReactElementOr<'denyButtonText'>
+  cancelButtonText?: ReactElementOr<'cancelButtonText'>
+  footer?: ReactElementOr<'footer'>
+  closeButtonHtml?: ReactElementOr<'closeButtonHtml'>
+  iconHtml?: ReactElementOr<'iconHtml'>
+  loaderHtml?: ReactElementOr<'loaderHtml'>
 }
 
 // Overwrite<T, U> will take the properties of U and add to it the properties of T that are not in U.
 // This emulates an overwrite (override) of chosen properties of T with properties of U.
 // It works like { ...T, ...U } in JS.
 // https://github.com/Microsoft/TypeScript/issues/12215#issuecomment-393936055
-type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
+type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U

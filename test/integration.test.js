@@ -2,12 +2,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import withReactContent from '../src/index'
-import {
-  Swal,
-  SwalWithoutAnimation,
-  cleanSwalState,
-  getVisibleSwalIconNames,
-} from './util/swalUtil'
+import { Swal, SwalWithoutAnimation, cleanSwalState, getVisibleSwalIconNames } from './util/swalUtil'
 import { timeout } from './util/util'
 
 describe('integration', () => {
@@ -37,7 +32,7 @@ describe('integration', () => {
         },
       })
     })
-    function getReactOptions () {
+    function getReactOptions() {
       return {
         title: <span>title</span>,
         html: <span>html</span>,
@@ -50,7 +45,7 @@ describe('integration', () => {
         footer: <span>footer</span>,
       }
     }
-    function checkReactOptions (MySwal) {
+    function checkReactOptions(MySwal) {
       expect(MySwal.getTitle().innerHTML).toEqual('<span>title</span>')
       expect(MySwal.getHtmlContainer().innerHTML).toEqual('<span>html</span>')
       expect(MySwal.getConfirmButton().innerHTML).toEqual('<span>confirmButtonText</span>')
@@ -69,9 +64,7 @@ describe('integration', () => {
       title: <span>React element</span>,
       footer: 'plain text',
       didOpen: () => {
-        expect(MySwal.getTitle().innerHTML).toEqual(
-          '<span>React element</span>',
-        )
+        expect(MySwal.getTitle().innerHTML).toEqual('<span>React element</span>')
         expect(MySwal.getFooter().innerHTML).toEqual('plain text')
         MySwal.clickConfirm()
       },
@@ -82,15 +75,13 @@ describe('integration', () => {
     const MySwal = withReactContent(SwalWithoutAnimation)
     MySwal.fire({
       title: <span>React element</span>,
-      footer: 'plain text'
+      footer: 'plain text',
     })
     await MySwal.fire({
       title: <span>React element</span>,
       footer: 'plain text',
       didOpen: () => {
-        expect(MySwal.getTitle().innerHTML).toEqual(
-          '<span>React element</span>',
-        )
+        expect(MySwal.getTitle().innerHTML).toEqual('<span>React element</span>')
         expect(MySwal.getFooter().innerHTML).toEqual('plain text')
         MySwal.clickConfirm()
       },
@@ -98,10 +89,10 @@ describe('integration', () => {
   })
   it('returns a class with the same instance & static properties as Swal', async () => {
     const MySwal = withReactContent(Swal)
-    Object.keys(Swal).forEach(key => {
+    Object.keys(Swal).forEach((key) => {
       expect(typeof MySwal[key]).toEqual(typeof Swal[key])
     })
-    Object.keys(Swal.prototype).forEach(key => {
+    Object.keys(Swal.prototype).forEach((key) => {
       expect(typeof MySwal.prototype[key]).toEqual(typeof Swal.prototype[key])
     })
   })

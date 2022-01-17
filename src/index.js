@@ -4,13 +4,13 @@ import { mounts } from './mounts'
 
 const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 
-export default function withReactContent (ParentSwal) {
+export default function withReactContent(ParentSwal) {
   /* Returns `params` separated into a tuple of `reactParams` (the React params that need to be rendered)
   and`otherParams` (all the other parameters, with any React params replaced with a space ' ') */
-  function extractReactParams (params) {
+  function extractReactParams(params) {
     const reactParams = {}
     const otherParams = {}
-    const mountKeys = mounts.map(mount => mount.key)
+    const mountKeys = mounts.map((mount) => mount.key)
     Object.entries(params).forEach(([key, value]) => {
       if (mountKeys.includes(key) && React.isValidElement(value)) {
         reactParams[key] = value
@@ -21,24 +21,24 @@ export default function withReactContent (ParentSwal) {
     })
     return [reactParams, otherParams]
   }
-  function render (swal, reactParams) {
+  function render(swal, reactParams) {
     Object.entries(reactParams).forEach(([key, value]) => {
-      const mount = mounts.find(mount => mount.key === key)
+      const mount = mounts.find((mount) => mount.key === key)
       const domElement = mount.getter(ParentSwal)
       ReactDOM.render(value, domElement)
       swal.__mountedDomElements.push(domElement)
     })
   }
 
-  function unrender (swal) {
-    swal.__mountedDomElements.forEach(domElement => {
+  function unrender(swal) {
+    swal.__mountedDomElements.forEach((domElement) => {
       ReactDOM.unmountComponentAtNode(domElement)
     })
     swal.__mountedDomElements = []
   }
 
   return class extends ParentSwal {
-    static argsToParams (args) {
+    static argsToParams(args) {
       if (React.isValidElement(args[0]) || React.isValidElement(args[1])) {
         const params = {}
         ;['title', 'html', 'icon'].forEach((name, index) => {
@@ -52,7 +52,7 @@ export default function withReactContent (ParentSwal) {
       }
     }
 
-    _main (params, mixinParams) {
+    _main(params, mixinParams) {
       this.__mountedDomElements = []
       this.__params = Object.assign({}, mixinParams, params)
       const [reactParams, otherParams] = extractReactParams(this.__params)
@@ -60,19 +60,19 @@ export default function withReactContent (ParentSwal) {
       const superDidDestroy = otherParams.didDestroy || noop
       return super._main(
         Object.assign({}, otherParams, {
-          didOpen: popup => {
+          didOpen: (popup) => {
             render(this, reactParams)
             superDidOpen(popup)
           },
-          didDestroy: popup => {
+          didDestroy: (popup) => {
             superDidDestroy(popup)
             unrender(this)
           },
-        }),
+        })
       )
     }
 
-    update (params) {
+    update(params) {
       Object.assign(this.__params, params)
       unrender(this)
       const [reactParams, otherParams] = extractReactParams(this.__params)

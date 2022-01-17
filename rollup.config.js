@@ -4,7 +4,7 @@ import { babel } from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
-const getBanner = file => `\
+const getBanner = (file) => `\
 /** @preserve
   * package: ${pkg.name} v${pkg.version}
   * file: ${file}
@@ -12,7 +12,7 @@ const getBanner = file => `\
   * license: ${pkg.license}
   **/\n`
 
-export default [false, true].map(minify => {
+export default [false, true].map((minify) => {
   const plugins = [
     nodeResolve(),
     commonjs(),
@@ -27,7 +27,7 @@ export default [false, true].map(minify => {
         output: {
           comments: (_, { value }) => /@preserve/.test(value),
         },
-      }),
+      })
     )
   }
   return {
@@ -45,7 +45,7 @@ export default [false, true].map(minify => {
         format: 'umd',
         name: 'sweetalert2ReactContent',
         globals: {
-          'react': 'React',
+          react: 'React',
           'react-dom': 'ReactDOM',
         },
       },

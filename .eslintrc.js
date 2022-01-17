@@ -1,8 +1,5 @@
 module.exports = {
-  extends: [
-    '@sweetalert2/eslint-config',
-    'plugin:react/recommended',
-  ],
+  extends: ['@sweetalert2/eslint-config', 'plugin:react/recommended'],
   settings: {
     react: {
       version: 'detect',
@@ -10,5 +7,5 @@ module.exports = {
   },
   rules: {
     'import/named': 'off', // todo: @limonte revisit this eslint issue
-  }
+  },
 }
