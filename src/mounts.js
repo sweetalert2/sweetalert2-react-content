@@ -1,38 +1,38 @@
 export const mounts = [
   {
     key: 'title',
-    getter: swal => swal.getTitle(),
+    getter: (swal) => swal.getTitle(),
   },
   {
     key: 'html',
-    getter: swal => swal.getHtmlContainer(),
+    getter: (swal) => swal.getHtmlContainer(),
   },
   {
     key: 'confirmButtonText',
-    getter: swal => swal.getConfirmButton(),
+    getter: (swal) => swal.getConfirmButton(),
   },
   {
     key: 'denyButtonText',
-    getter: swal => swal.getDenyButton(),
+    getter: (swal) => swal.getDenyButton(),
   },
   {
     key: 'cancelButtonText',
-    getter: swal => swal.getCancelButton(),
+    getter: (swal) => swal.getCancelButton(),
   },
   {
     key: 'footer',
-    getter: swal => swal.getFooter(),
+    getter: (swal) => swal.getFooter(),
   },
   {
     key: 'closeButtonHtml',
-    getter: swal => swal.getCloseButton(),
+    getter: (swal) => swal.getCloseButton(),
   },
   {
     key: 'iconHtml',
-    getter: swal => swal.getIcon().querySelector('.swal2-icon-content'),
+    getter: (swal) => swal.getIcon().querySelector('.swal2-icon-content'),
   },
   {
     key: 'loaderHtml',
-    getter: swal => swal.getLoader(),
+    getter: (swal) => swal.getLoader(),
   },
 ]
