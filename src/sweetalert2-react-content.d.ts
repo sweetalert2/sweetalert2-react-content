@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import { ReactElement } from 'react'
 import swal, { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweetalert2'
 
