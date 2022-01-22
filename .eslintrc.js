@@ -6,6 +6,6 @@ module.exports = {
     },
   },
   rules: {
-    'import/named': 'off', // todo: @limonte revisit this eslint issue
+    '@typescript-eslint/no-explicit-any': 0,
   },
 }
