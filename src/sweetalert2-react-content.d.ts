@@ -1,5 +1,6 @@
-import { ReactElement } from 'react'
-import swal, { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweetalert2'
+import type { ReactElement } from 'react'
+import type { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweetalert2'
+import type swal from 'sweetalert2'
 
 /**
  * Wraps SweetAlert2 implementation with a compatible implementation that supports React elements.
