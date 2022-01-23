@@ -1270,9 +1270,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@sweetalert2/eslint-config@^1.0.0":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@sweetalert2/eslint-config/-/eslint-config-1.0.17.tgz#a9971e12cfb0f97c46ff459c3b1c71842562e85d"
-  integrity sha512-+JjzvTcqg8bmEEoNV/aWeRTcrspmfW+PIn0f+2C/uniMXRqelKC0LzZZLgTxWHyt9RBfBypQdykCRdDMXxW0lQ==
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@sweetalert2/eslint-config/-/eslint-config-1.0.18.tgz#5a6950fa5dd3c9a5f70831e05dfb7c410081d046"
+  integrity sha512-Psd5Mdmbf8IRQbIOnpQ8g4FS9XSEe0gFllU0ALHaRCiRmjBDmwdYYKgxHh7zklvnMm06F/+XsoVKOLfIbr0Tag==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.0.0"
     "@typescript-eslint/parser" "^5.0.0"
