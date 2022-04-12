@@ -1,3 +1,13 @@
+# [5.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.2.0...v5.0.0) (2022-04-12)
+
+
+* BREAKING CHANGE: React 18 🎉 (#189) ([978586a](https://github.com/sweetalert2/sweetalert2-react-content/commit/978586ad20850f8e1e995e0985a80a382d6b088b)), closes [#189](https://github.com/sweetalert2/sweetalert2-react-content/issues/189)
+
+
+### BREAKING CHANGES
+
+* React 18 🎉
+
 # [4.2.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.1.1...v4.2.0) (2021-10-18)
 
 
