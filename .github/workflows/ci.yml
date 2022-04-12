@@ -12,25 +12,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Install npm dependencies
-      run: yarn install
+      - name: Install npm dependencies
+        run: yarn install
 
-    - name: Run tests
-      run: yarn test
+      - run: yarn lint
 
-    - name: Run automated release process with semantic-release
-      if: github.event_name == 'push'
-      uses: cycjimmy/semantic-release-action@v2
-      with:
-        extra_plugins: |
-          @semantic-release/changelog
-          @semantic-release/git
-          @semantic-release/exec
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: yarn test
+
+      - run: yarn check-dts
+
+      - name: Run automated release process with semantic-release
+        if: github.event_name == 'push'
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semantic-release/exec
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     # - name: Report coverage to coveralls.io
     #   uses: coverallsapp/github-action@master
