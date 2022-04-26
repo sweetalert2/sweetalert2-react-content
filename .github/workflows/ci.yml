@@ -1,9 +1,9 @@
-name: build
+name: Run tests
 
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -36,6 +36,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     # - name: Report coverage to coveralls.io
-    #   uses: coverallsapp/github-action@master
+    #   uses: coverallsapp/github-action@main
     #   with:
     #     github-token: ${{ secrets.GITHUB_TOKEN }}
