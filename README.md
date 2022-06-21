@@ -48,3 +48,22 @@ MySwal.fire({
 ```
 
 The `dist/sweetalert2-react-content.umd.js` file defines `window.sweetalert2ReactContent` in non-CJS/AMD environments.
+
+## Limitations
+
+Sweetalert2 popups are displayed outside the `ReactTree`.  This means that you can't easily instantiate `ReactRouter` components (such as `<Link>`) inside them.
+
+If you need to do this, you have to provide a [HistoryRouter](https://reactrouter.com/docs/en/v6/routers/history-router) with shared `history`
+
+```jsx
+import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import history from "../path/to/history";
+
+MySwal.fire({
+  html: (
+    <HistoryRouter history={history}>
+      ...
+    </HistoryRouter>
+  ),
+})
+```
