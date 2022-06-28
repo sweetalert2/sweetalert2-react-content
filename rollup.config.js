@@ -1,5 +1,6 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import replace from '@rollup/plugin-replace'
 import { babel } from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
@@ -14,6 +15,10 @@ const getBanner = (file) => `\
 
 export default [false, true].map((minify) => {
   const plugins = [
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'preventAssignment': true,
+    }),
     nodeResolve(),
     commonjs(),
     babel({
@@ -45,7 +50,7 @@ export default [false, true].map((minify) => {
         format: 'umd',
         name: 'sweetalert2ReactContent',
         globals: {
-          react: 'React',
+          'react': 'React',
           'react-dom': 'ReactDOM',
         },
       },
