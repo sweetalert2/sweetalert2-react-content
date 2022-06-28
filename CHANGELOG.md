@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.0...v5.0.1) (2022-06-28)
+
+
+### Bug Fixes
+
+* pass process.env.NODE_ENV=production to rollup build config ([734daa4](https://github.com/sweetalert2/sweetalert2-react-content/commit/734daa4e1439530c7971d100f0716aeffb8a5860))
+
 # [5.0.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v4.2.0...v5.0.0) (2022-04-12)
 
 
