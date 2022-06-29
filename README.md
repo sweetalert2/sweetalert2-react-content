@@ -48,3 +48,9 @@ MySwal.fire({
 ```
 
 The `dist/sweetalert2-react-content.umd.js` file defines `window.sweetalert2ReactContent` in non-CJS/AMD environments.
+
+## Limitations
+
+SweetAlert2 renders its content outside of the `ReactTree`. In order to render React Router components (such as `Link`) you have to wrap them in the routing context which should be the same with the app.
+
+That can be achived by using the [`HistoryRouter`](https://reactrouter.com/docs/en/v6/routers/history-router) with shared `history`. [Please refer to the official code example ↗️](https://sweetalert2.github.io/recipe-gallery/sweetalert2-react-router.html)
