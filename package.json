@@ -14,7 +14,8 @@
     "start": "vite",
     "cypress:open": "cypress open",
     "check-dts": "tsc src/sweetalert2-react-content.d.ts --lib dom,es6",
-    "lint": "eslint src/**/*.{js,d.ts} test && prettier --check 'src/*.{js,d.ts}'",
+    "lint": "eslint . --ext .js,.jsx,.d.ts && prettier . --check",
+    "lint-fix": "eslint . --ext .js,.jsx,.d.ts --fix && prettier . --write",
     "test": "cypress run --headless",
     "build": "rollup --config",
     "prepublishOnly": "npm run build"
