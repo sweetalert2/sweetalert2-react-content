@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.1...v5.0.2) (2022-07-22)
+
+
+### Bug Fixes
+
+* use react-dom/client in rollup config ([#205](https://github.com/sweetalert2/sweetalert2-react-content/issues/205)) ([4ce9ca9](https://github.com/sweetalert2/sweetalert2-react-content/commit/4ce9ca9be2c4c355bbd88dfb93836ef360a8a812))
+
 ## [5.0.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.0...v5.0.1) (2022-06-28)
 
 
