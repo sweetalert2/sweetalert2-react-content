@@ -37,7 +37,7 @@ export default [false, true].map((minify) => {
   }
   return {
     input: 'src/index.js',
-    external: ['react', 'react-dom'],
+    external: ['react', 'react-dom/client'],
     plugins,
     output: [
       {
@@ -51,7 +51,7 @@ export default [false, true].map((minify) => {
         name: 'sweetalert2ReactContent',
         globals: {
           'react': 'React',
-          'react-dom': 'ReactDOM',
+          'react-dom/client': 'ReactDOM',
         },
       },
     ].map(({ format, ...rest }) => {
