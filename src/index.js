@@ -1,5 +1,5 @@
 import React from 'react'
-import { createRoot,  } from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import { mounts } from './mounts'
 
 const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
@@ -28,7 +28,7 @@ export default function withReactContent(ParentSwal, Context) {
       const domElement = mount.getter(ParentSwal)
       const root = createRoot(domElement)
       if (Context) {
-        root.render(<Context>{value}</Context>)
+        root.render(React.createElement(Context, {}, value))
       } else {
         root.render(value)
       }
