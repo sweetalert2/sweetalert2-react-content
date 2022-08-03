@@ -1,10 +1,10 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot,  } from 'react-dom/client'
 import { mounts } from './mounts'
 
 const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 
-export default function withReactContent(ParentSwal) {
+export default function withReactContent(ParentSwal, Context) {
   /* Returns `params` separated into a tuple of `reactParams` (the React params that need to be rendered)
   and`otherParams` (all the other parameters, with any React params replaced with a space ' ') */
   function extractReactParams(params) {
@@ -27,7 +27,11 @@ export default function withReactContent(ParentSwal) {
       const mount = mounts.find((mount) => mount.key === key)
       const domElement = mount.getter(ParentSwal)
       const root = createRoot(domElement)
-      root.render(value)
+      if (Context) {
+        root.render(<Context>{value}</Context>)
+      } else {
+        root.render(value)
+      }
       swal.__roots.push(root)
     })
   }
