@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
 let id = 0
@@ -6,8 +6,8 @@ let id = 0
 export const SwalPortal = ({ apiRef }) => {
   const [components, setComponents] = useState([])
 
-  const api = useMemo(
-    () => ({
+  useEffect(() => {
+    apiRef.current = {
       render: (comp, domElement) => {
         let compId = id
         id += 1
@@ -21,12 +21,7 @@ export const SwalPortal = ({ apiRef }) => {
           },
         }
       },
-    }),
-    []
-  )
-
-  useEffect(() => {
-    apiRef.current = api
+    }
   }, [apiRef])
 
   return <>{components.map(({ comp, domElement }) => createPortal(comp, domElement))}</>
