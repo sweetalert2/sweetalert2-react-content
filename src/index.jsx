@@ -30,7 +30,7 @@ export default function withReactContent(ParentSwal) {
       const mount = mounts.find((mount) => mount.key === key)
       const domElement = mount.getter(ParentSwal)
       if (providerApiRef.current) {
-        swal.__roots.push(providerApiRef.current.mount(value, domElement))
+        swal.__roots.push(providerApiRef.current.render(value, domElement))
       } else {
         const root = createRoot(domElement)
         root.render(value)
