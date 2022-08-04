@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { createRef } from 'react'
+import { SwalProvider } from './SwalProvider'
 import { createRoot } from 'react-dom/client'
 import { mounts } from './mounts'
 
 const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 
-export default function withReactContent(ParentSwal, Context) {
+export default function withReactContent(ParentSwal) {
   /* Returns `params` separated into a tuple of `reactParams` (the React params that need to be rendered)
   and`otherParams` (all the other parameters, with any React params replaced with a space ' ') */
   function extractReactParams(params) {
@@ -26,13 +27,13 @@ export default function withReactContent(ParentSwal, Context) {
     Object.entries(reactParams).forEach(([key, value]) => {
       const mount = mounts.find((mount) => mount.key === key)
       const domElement = mount.getter(ParentSwal)
-      const root = createRoot(domElement)
-      if (Context) {
-        root.render(React.createElement(Context, {}, value))
+      if (this._providerApiRef) {
+        swal.__roots.push(this._providerApiRef.current.mount(value, domElement))
       } else {
+        const root = createRoot(domElement)
         root.render(value)
+        swal.__roots.push(root)
       }
-      swal.__roots.push(root)
     })
   }
 
@@ -92,6 +93,11 @@ export default function withReactContent(ParentSwal, Context) {
       const [reactParams, otherParams] = extractReactParams(this.__params)
       super.update(otherParams)
       render(this, reactParams)
+    }
+
+    RootProvider() {
+      this._providerApiRef = createRef()
+      return <SwalProvider apiRef={this._providerApiRef} />
     }
   }
 }

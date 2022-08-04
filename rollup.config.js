@@ -19,7 +19,9 @@ export default [false, true].map((minify) => {
       'process.env.NODE_ENV': JSON.stringify('production'),
       'preventAssignment': true,
     }),
-    nodeResolve(),
+    nodeResolve({
+      extensions: ['.mjs', '.js', '.jsx', '.json', '.node'],
+    }),
     commonjs(),
     babel({
       babelHelpers: 'bundled',
@@ -36,7 +38,7 @@ export default [false, true].map((minify) => {
     )
   }
   return {
-    input: 'src/index.js',
+    input: 'src/index.jsx',
     external: ['react', 'react-dom/client'],
     plugins,
     output: [
