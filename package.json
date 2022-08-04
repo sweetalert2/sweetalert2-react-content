@@ -1,7 +1,7 @@
 {
   "name": "omerman-sweetalert2-react-content",
   "private": false,
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Official sweetalert2 enhancer adding support for React elements as content.",
   "main": "dist/sweetalert2-react-content.cjs.js",
   "module": "dist/sweetalert2-react-content.es.js",
