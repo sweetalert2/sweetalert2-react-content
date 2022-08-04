@@ -15,7 +15,7 @@ export const SwalProvider = ({ apiRef }) => {
         id += 1
 
         setComponents((curr) => {
-          curr.push({ id: compId, comp, domElement })
+          return [...curr, { id: compId, comp, domElement }]
         })
         return {
           unmount: () => {
