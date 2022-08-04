@@ -5,6 +5,8 @@ import { mounts } from './mounts'
 
 const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 
+const providerApiRef = createRef()
+
 export default function withReactContent(ParentSwal) {
   /* Returns `params` separated into a tuple of `reactParams` (the React params that need to be rendered)
   and`otherParams` (all the other parameters, with any React params replaced with a space ' ') */
@@ -27,8 +29,8 @@ export default function withReactContent(ParentSwal) {
     Object.entries(reactParams).forEach(([key, value]) => {
       const mount = mounts.find((mount) => mount.key === key)
       const domElement = mount.getter(ParentSwal)
-      if (this._providerApiRef) {
-        swal.__roots.push(this._providerApiRef.current.mount(value, domElement))
+      if (providerApiRef.current) {
+        swal.__roots.push(providerApiRef.current.mount(value, domElement))
       } else {
         const root = createRoot(domElement)
         root.render(value)
@@ -94,10 +96,9 @@ export default function withReactContent(ParentSwal) {
       super.update(otherParams)
       render(this, reactParams)
     }
-
-    RootProvider() {
-      this._providerApiRef = createRef()
-      return <SwalProvider apiRef={this._providerApiRef} />
-    }
   }
+}
+
+export const SwalRoot = () => {
+  return <SwalProvider apiRef={providerApiRef} />
 }

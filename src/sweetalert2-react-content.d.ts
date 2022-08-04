@@ -1,5 +1,4 @@
-import type { ComponentType, ReactElement, ReactNode } from 'react'
-import type React from 'react'
+import type { ComponentType, ReactElement } from 'react'
 import type { SweetAlertIcon, SweetAlertOptions, SweetAlertResult } from 'sweetalert2'
 import type swal from 'sweetalert2'
 
@@ -18,6 +17,8 @@ import type swal from 'sweetalert2'
  */
 export default function withReactContent(parentSwal?: SweetAlert2): SweetAlert2 & ReactSweetAlert
 
+export type SwalRoot = ComponentType
+
 /**
  * Mimics SweetAlert2's call signatures, adding React elements as valid inputs.
  */
@@ -31,8 +32,6 @@ interface ReactSweetAlert {
   fire(options: ReactSweetAlertOptions): Promise<SweetAlertResult>
 
   mixin(options: ReactSweetAlertOptions): SweetAlert2 & ReactSweetAlert
-
-  RootProvider: React.ComponentType
 }
 
 type SweetAlert2 = typeof swal
