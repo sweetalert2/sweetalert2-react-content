@@ -34,7 +34,7 @@ interface ReactSweetAlert {
 
 type SweetAlert2 = typeof swal
 
-type ReactSweetAlertOptions = Overwrite<SweetAlertOptions, ReactOptions>
+export type ReactSweetAlertOptions = Overwrite<SweetAlertOptions, ReactOptions>
 
 type ReactElementOr<K extends keyof SweetAlertOptions> = SweetAlertOptions[K] | ReactElement<any>
 
