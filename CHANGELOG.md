@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.2...v5.0.3) (2022-08-17)
+
+
+### Bug Fixes
+
+* export type ReactSweetAlertOptions (closes [#208](https://github.com/sweetalert2/sweetalert2-react-content/issues/208)) ([b3564da](https://github.com/sweetalert2/sweetalert2-react-content/commit/b3564da46e7ccd8301c785311e2318546dc1ed2e))
+
 ## [5.0.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.1...v5.0.2) (2022-07-22)
 
 
