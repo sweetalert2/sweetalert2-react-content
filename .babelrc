@@ -1,12 +1,15 @@
 {
   "presets": [
-    ["@babel/preset-env", {
-      "targets": {
-        "chrome": "88",
-        "firefox": "86",
-        "safari": "12"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "88",
+          "firefox": "86",
+          "safari": "12"
+        }
       }
-    }],
+    ],
     ["@babel/preset-react"]
   ],
   "env": {

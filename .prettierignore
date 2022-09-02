@@ -2,3 +2,5 @@ node_modules/
 coverage/
 .cache/
 dist/
+
+CHANGELOG.md
