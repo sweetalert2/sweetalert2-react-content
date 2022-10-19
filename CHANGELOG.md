@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.3...v5.0.4) (2022-10-19)
+
+
+### Bug Fixes
+
+* **deps:** update rollup to v3 ([#221](https://github.com/sweetalert2/sweetalert2-react-content/issues/221)) ([387b662](https://github.com/sweetalert2/sweetalert2-react-content/commit/387b66246b8db1ad6284ffc95df01ea595083490))
+
 ## [5.0.3](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.2...v5.0.3) (2022-08-17)
 
 
