@@ -1,3 +1,10 @@
+## [5.0.5](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.4...v5.0.5) (2022-10-19)
+
+
+### Bug Fixes
+
+* use `Swal.getIconContent()` ([#222](https://github.com/sweetalert2/sweetalert2-react-content/issues/222)) ([d63b4d8](https://github.com/sweetalert2/sweetalert2-react-content/commit/d63b4d881c045ea15a240ddb066009a2bfa3709e))
+
 ## [5.0.4](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.3...v5.0.4) (2022-10-19)
 
 
