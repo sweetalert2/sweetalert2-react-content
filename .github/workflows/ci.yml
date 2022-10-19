@@ -1,14 +1,10 @@
-name: Run tests
+name: Test, lint, build
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
 
 jobs:
   build:
-    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +19,8 @@ jobs:
 
       - run: yarn check-dts
 
+      - run: yarn build
+
       - name: Run automated release process with semantic-release
         if: github.event_name == 'push'
         uses: cycjimmy/semantic-release-action@v2
@@ -34,8 +32,3 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-    # - name: Report coverage to coveralls.io
-    #   uses: coverallsapp/github-action@main
-    #   with:
-    #     github-token: ${{ secrets.GITHUB_TOKEN }}
