@@ -17,7 +17,7 @@
     "lint": "eslint . --ext .js,.jsx,.d.ts && prettier . --check",
     "lint-fix": "eslint . --ext .js,.jsx,.d.ts --fix && prettier . --write",
     "test": "cypress run --headless",
-    "build": "rollup --config",
+    "build": "rollup --config --bundleConfigAsCjs",
     "prepublishOnly": "npm run build"
   },
   "repository": {
