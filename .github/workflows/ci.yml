@@ -20,6 +20,9 @@ jobs:
 
       - run: yarn test
 
+      - name: test in commonJS
+        run: node test/require-in-commonjs.cjs
+
       - name: Run automated release process with semantic-release
         if: github.ref_name == 'main'
         uses: cycjimmy/semantic-release-action@v2
