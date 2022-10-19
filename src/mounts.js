@@ -29,7 +29,7 @@ export const mounts = [
   },
   {
     key: 'iconHtml',
-    getter: (swal) => swal.getIcon().querySelector('.swal2-icon-content'),
+    getter: (swal) => swal.getIconContent(),
   },
   {
     key: 'loaderHtml',
