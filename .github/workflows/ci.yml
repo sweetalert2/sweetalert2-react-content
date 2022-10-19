@@ -10,16 +10,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install npm dependencies
-        run: yarn install
+      - run: yarn install
 
       - run: yarn lint
-
-      - run: yarn test
 
       - run: yarn check-dts
 
       - run: yarn build
+
+      - run: yarn test
 
       - name: Run automated release process with semantic-release
         if: github.event_name == 'push'

@@ -1,17 +1,11 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
-import { babel } from '@rollup/plugin-babel'
+import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
-const getBanner = (file) => `\
-/** @preserve
-  * package: ${pkg.name} v${pkg.version}
-  * file: ${file}
-  * homepage: ${pkg.homepage}
-  * license: ${pkg.license}
-  **/\n`
+const banner = `// ${pkg.name} v${pkg.version}\n`
 
 export default [false, true].map((minify) => {
   const plugins = [
@@ -30,7 +24,7 @@ export default [false, true].map((minify) => {
     plugins.push(
       terser({
         output: {
-          comments: (_, { value }) => /@preserve/.test(value),
+          comments: (_, { value }) => /sweetalert2-react-content v/.test(value),
         },
       })
     )
@@ -61,7 +55,7 @@ export default [false, true].map((minify) => {
         format,
         file,
         sourcemap: true,
-        banner: getBanner(file),
+        banner,
         exports: 'auto',
         ...rest,
       }
