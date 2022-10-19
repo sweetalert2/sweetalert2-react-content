@@ -3,7 +3,6 @@
 Official [SweetAlert2](https://sweetalert2.github.io/) enhancer adding support for React elements as content.
 
 [![Build Status](https://github.com/sweetalert2/sweetalert2-react-content/workflows/build/badge.svg)](https://github.com/sweetalert2/sweetalert2-react-content/actions)
-[![Coverage Status](https://coveralls.io/repos/github/sweetalert2/sweetalert2-react-content/badge.svg?branch=main)](https://coveralls.io/github/sweetalert2/sweetalert2-react-content?branch=main)
 [![npm version](https://img.shields.io/npm/v/sweetalert2-react-content.svg)](https://www.npmjs.com/package/sweetalert2-react-content)
 
 [![semantic-release badge](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/sweetalert2/sweetalert2-react-content/blob/main/CHANGELOG.md)
