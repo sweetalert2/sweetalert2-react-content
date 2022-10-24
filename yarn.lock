@@ -3795,9 +3795,9 @@ supports-preserve-symlinks-flag@^1.0.0:
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
 sweetalert2@^11.6.0:
-  version "11.6.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.6.1.tgz#1323a4f31b26433b4eb98e9b2256a0115ffef63e"
-  integrity sha512-38RU6l1PGvnrQ3ceGvnRO/b2RGAAcdFGE80kIqjHLNt61pBMzJU5DtVtOdCPMy8CpJf86jzV0uqIm12pMyd3lQ==
+  version "11.6.2"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.6.2.tgz#282e01bf0c4a70bda5c6dc00e384ee85c228e9c3"
+  integrity sha512-FAyAddpbcpEawDNFZDoO9XFFOc0ulECgQcadMJpsjMjrlqG7svar+ZGG3qddYYi8MZwUULrOxbtQj98EMIbH8w==
 
 terser@^5.0.0:
   version "5.15.1"
