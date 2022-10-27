@@ -1,3 +1,10 @@
+## [5.0.7](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.6...v5.0.7) (2022-10-27)
+
+
+### Bug Fixes
+
+* plugin version in dist files ([c559778](https://github.com/sweetalert2/sweetalert2-react-content/commit/c559778bed64609f23f4f949885fec7e62c04af9))
+
 ## [5.0.6](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.5...v5.0.6) (2022-10-27)
 
 
