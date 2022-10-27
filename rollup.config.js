@@ -5,7 +5,9 @@ import babel from '@rollup/plugin-babel'
 import terser from '@rollup/plugin-terser'
 import pkg from './package.json'
 
-const banner = `// ${pkg.name} v${pkg.version}\n`
+const version = process.env.VERSION || pkg.version
+
+const banner = `// ${pkg.name} v${version}\n`
 
 export default [false, true].map((minify) => {
   const plugins = [
