@@ -1,12 +1,13 @@
 module.exports = {
   debug: true,
   branches: ['main'],
-  plugins: [
-    '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
+  prepare: [
+    {
+      path: '@semantic-release/exec',
+      cmd: 'VERSION=${nextRelease.version} yarn build',
+    },
     '@semantic-release/changelog',
     '@semantic-release/npm',
     '@semantic-release/git',
-    '@semantic-release/github',
   ],
 }
