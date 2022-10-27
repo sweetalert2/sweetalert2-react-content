@@ -1,3 +1,10 @@
+## [5.0.6](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.5...v5.0.6) (2022-10-27)
+
+
+### Bug Fixes
+
+* use @rollup/plugin-terser ([8f4f44f](https://github.com/sweetalert2/sweetalert2-react-content/commit/8f4f44fd6a5bb4861c99ef6dc784d13b97350655))
+
 ## [5.0.5](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.4...v5.0.5) (2022-10-19)
 
 
