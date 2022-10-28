@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { createRef } from 'react'
+import { SwalPortal } from './SwalPortal'
 import { createRoot } from 'react-dom/client'
 import { mounts } from './mounts'
 
 const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
+
+const portalApiRef = createRef()
 
 export default function withReactContent(ParentSwal) {
   /* Returns `params` separated into a tuple of `reactParams` (the React params that need to be rendered)
@@ -26,9 +29,13 @@ export default function withReactContent(ParentSwal) {
     Object.entries(reactParams).forEach(([key, value]) => {
       const mount = mounts.find((mount) => mount.key === key)
       const domElement = mount.getter(ParentSwal)
-      const root = createRoot(domElement)
-      root.render(value)
-      swal.__roots.push(root)
+      if (portalApiRef.current) {
+        swal.__roots.push(portalApiRef.current.render(value, domElement))
+      } else {
+        const root = createRoot(domElement)
+        root.render(value)
+        swal.__roots.push(root)
+      }
     })
   }
 
@@ -90,4 +97,8 @@ export default function withReactContent(ParentSwal) {
       render(this, reactParams)
     }
   }
+}
+
+export const SwalRoot = () => {
+  return <SwalPortal apiRef={portalApiRef} />
 }
