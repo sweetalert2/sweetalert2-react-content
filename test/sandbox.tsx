@@ -3,13 +3,11 @@ import React, { useState } from 'react'
 import Swal from 'sweetalert2/dist/sweetalert2.all'
 import withReactContent from '../src/index'
 
-let MySwal = withReactContent(Swal)
-
 function App() {
   const [inputValue, setInputValue] = useState('')
 
   function showSwal() {
-    MySwal.fire({
+    withReactContent(Swal).fire({
       title: <i>Input something</i>,
       input: 'text',
       inputValue,
