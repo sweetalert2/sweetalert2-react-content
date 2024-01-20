@@ -3,17 +3,17 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit",
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
   },
   "folders": [
     {
-      "path": "."
-    }
+      "path": ".",
+    },
   ],
   "extensions": {
-    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
-  }
+    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+  },
 }
