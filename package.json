@@ -68,7 +68,7 @@
     "rollup": "^4.0.0",
     "sweetalert2": "^11.6.0",
     "typescript": "^5.0.0",
-    "vite": "^5.0.0"
+    "vite": "^6.0.0"
   },
   "prettier": {
     "printWidth": 120,
