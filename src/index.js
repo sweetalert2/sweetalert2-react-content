@@ -2,7 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { mounts } from './mounts'
 
-const noop = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
+const noop = () => {}
 
 export default function withReactContent(ParentSwal) {
   /* Returns `params` separated into a tuple of `reactParams` (the React params that need to be rendered)
