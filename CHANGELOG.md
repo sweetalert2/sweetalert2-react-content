@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.7...v5.1.0) (2024-12-16)
+
+
+### Features
+
+* support react 19 ([8aaadea](https://github.com/sweetalert2/sweetalert2-react-content/commit/8aaadea222099ffd4e2e8fbb1aa3820c75dc5b98))
+
 ## [5.0.7](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.6...v5.0.7) (2022-10-27)
 
 
