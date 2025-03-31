@@ -11,8 +11,10 @@ context('SweetAlert2 React Content', () => {
       MySwal.fire({
         ...reactParams,
         didOpen: () => {
-          checkReactOptions(MySwal)
-          done()
+          setTimeout(() => {
+            checkReactOptions(MySwal)
+            done()
+          }, 100)
         },
       })
     })
@@ -22,8 +24,10 @@ context('SweetAlert2 React Content', () => {
       const MyConfiguredSwal = MySwal.mixin({ ...reactParams })
       MyConfiguredSwal.fire({
         didOpen: () => {
-          checkReactOptions(MySwal)
-          done()
+          setTimeout(() => {
+            checkReactOptions(MySwal)
+            done()
+          }, 100)
         },
       })
     })
@@ -137,7 +141,7 @@ context('SweetAlert2 React Content', () => {
         MySwal.clickConfirm()
         await swal
         done()
-      })
+      }, 100)
     })
   })
 })

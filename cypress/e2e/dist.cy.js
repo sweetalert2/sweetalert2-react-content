@@ -20,8 +20,10 @@ for (const [name, withReactContent] of Object.entries(entries)) {
         MySwal.fire({
           ...reactParams,
           didOpen: () => {
-            checkReactOptions(MySwal)
-            done()
+            setTimeout(() => {
+              checkReactOptions(MySwal)
+              done()
+            }, 100)
           },
         })
       })
@@ -31,8 +33,10 @@ for (const [name, withReactContent] of Object.entries(entries)) {
         const MyConfiguredSwal = MySwal.mixin({ ...reactParams })
         MyConfiguredSwal.fire({
           didOpen: () => {
-            checkReactOptions(MySwal)
-            done()
+            setTimeout(() => {
+              checkReactOptions(MySwal)
+              done()
+            }, 100)
           },
         })
       })
@@ -146,7 +150,7 @@ for (const [name, withReactContent] of Object.entries(entries)) {
           MySwal.clickConfirm()
           await swal
           done()
-        })
+        }, 100)
       })
     })
   })
