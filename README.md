@@ -5,7 +5,6 @@ Official [SweetAlert2](https://sweetalert2.github.io/) enhancer adding support f
 - Simple example: https://sweetalert2.github.io/recipe-gallery/sweetalert2-react.html
 - With React Router: https://sweetalert2.github.io/recipe-gallery/sweetalert2-react-router.html
 - With react-day-picker: https://sweetalert2.github.io/recipe-gallery/input-datepicker.html
-- With Formik: https://sweetalert2.github.io/recipe-gallery/sweetalert2-formik.html
 
 ---
 
