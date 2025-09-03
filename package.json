@@ -59,7 +59,7 @@
     "@types/react": "^19.0.0",
     "@vitejs/plugin-react": "^5.0.0",
     "babel-core": "^7.0.0-bridge.0",
-    "cypress": "^14.0.0",
+    "cypress": "^15.0.0",
     "eslint": "^9.0.0",
     "eslint-plugin-react": "^7.31.10",
     "prettier": "^3.0.0",
