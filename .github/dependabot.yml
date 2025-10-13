@@ -9,23 +9,15 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-    # don't touch package.json, only update yarn.lock
-    versioning-strategy: lockfile-only
-    # group minor and patch deps
+    # group all deps
     groups:
-      production-dependencies:
-        dependency-type: 'production'
+      dependencies:
         update-types:
-          - 'minor'
-          - 'patch'
-      development-dependencies:
-        dependency-type: 'development'
-        update-types:
+          - 'major'
           - 'minor'
           - 'patch'
     # do not update if a dependency’s release falls within its cooldown period (same as minimumReleaseAge or stabilityDays)
     cooldown:
-      default-days: 5
       semver-major-days: 30
       semver-minor-days: 7
       semver-patch-days: 7
