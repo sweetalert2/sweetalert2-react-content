@@ -9,16 +9,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
 
-      - run: yarn install
+      - run: bun install
 
-      - run: yarn lint
+      - run: bun run lint
 
-      - run: yarn check-dts
+      - run: bun run check-dts
 
-      - run: yarn build
+      - run: bun run build
 
-      - run: yarn test
+      - run: bun run test
 
       - name: test in commonJS
         run: node test/require-in-commonjs.cjs
