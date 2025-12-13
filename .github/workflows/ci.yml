@@ -6,10 +6,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for trusted publishing and npm provenance
 
     steps:
       - uses: actions/checkout@v5
       - uses: oven-sh/setup-bun@v2
+
+      # because npm 10.8.2 (default) doesn't work with trusted publishing, 11.6.2 works
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
 
       - run: bun install
 
@@ -26,12 +38,11 @@ jobs:
 
       - name: Run automated release process with semantic-release
         if: github.ref_name == 'main'
-        uses: cycjimmy/semantic-release-action@v4
+        uses: cycjimmy/semantic-release-action@v6
         with:
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git
             @semantic-release/exec
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
