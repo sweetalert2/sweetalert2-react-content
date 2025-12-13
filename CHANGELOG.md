@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.1.0...v5.1.1) (2025-12-13)
+
+
+### Bug Fixes
+
+* set up releasing with trusted publishing ([a6c30dd](https://github.com/sweetalert2/sweetalert2-react-content/commit/a6c30ddcd12c37d4102dba83d54068fc5547509e))
+
 # [5.1.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.0.7...v5.1.0) (2024-12-16)
 
 
