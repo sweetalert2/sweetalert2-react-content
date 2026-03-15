@@ -1,10 +1,9 @@
 {
-  "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "printWidth": 120,
   "semi": false,
   "singleQuote": true,
   "quoteProps": "consistent",
   "trailingComma": "es5",
   "sortPackageJson": false,
-  "ignorePatterns": ["CHANGELOG.md", "dist"]
+  "ignorePatterns": ["CHANGELOG.md", "dist", ".oxfmtrc.json"],
 }
