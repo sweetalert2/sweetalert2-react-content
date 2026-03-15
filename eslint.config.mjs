@@ -6,6 +6,11 @@ export default [
   ...sweetAlert2EslintConfig,
   reactPlugin.configs.flat.recommended,
   {
+    settings: {
+      react: {
+        version: '19',
+      },
+    },
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-require-imports': 'off',
