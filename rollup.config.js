@@ -1,6 +1,3 @@
-import nodeResolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
-import replace from '@rollup/plugin-replace'
 import babel from '@rollup/plugin-babel'
 import terser from '@rollup/plugin-terser'
 import pkg from './package.json'
@@ -11,12 +8,6 @@ const banner = `// ${pkg.name} v${version}\n`
 
 export default [false, true].map((minify) => {
   const plugins = [
-    replace({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-      'preventAssignment': true,
-    }),
-    nodeResolve(),
-    commonjs(),
     babel({
       babelHelpers: 'bundled',
       exclude: 'node_modules/**',
