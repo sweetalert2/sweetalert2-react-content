@@ -1,3 +1,10 @@
+## [5.1.2](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.1.1...v5.1.2) (2026-03-15)
+
+
+### Bug Fixes
+
+* remove unused rollup plugin devDependencies ([#285](https://github.com/sweetalert2/sweetalert2-react-content/issues/285)) ([3fb0363](https://github.com/sweetalert2/sweetalert2-react-content/commit/3fb0363bd7f5d7f67583bb9cc64896974d17bc7b))
+
 ## [5.1.1](https://github.com/sweetalert2/sweetalert2-react-content/compare/v5.1.0...v5.1.1) (2025-12-13)
 
 
