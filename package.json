@@ -14,8 +14,8 @@
     "dev": "vite",
     "cypress:open": "cypress open",
     "check-dts": "tsc src/sweetalert2-react-content.d.ts --lib dom,es6",
-    "lint": "eslint . && prettier . --check",
-    "lint-fix": "eslint . --fix && prettier . --write",
+    "lint": "eslint . && oxfmt --check",
+    "lint-fix": "eslint . --fix && oxfmt",
     "test": "cypress run --headless",
     "build": "rollup --config --bundleConfigAsCjs"
   },
@@ -62,19 +62,12 @@
     "cypress": "^15.0.0",
     "eslint": "^9.0.0",
     "eslint-plugin-react": "^7.31.10",
-    "prettier": "^3.0.0",
+    "oxfmt": "^0.36.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rollup": "^4.0.0",
     "sweetalert2": "^11.6.0",
     "typescript": "^5.0.0",
     "vite": "^7.0.0"
-  },
-  "prettier": {
-    "printWidth": 120,
-    "semi": false,
-    "singleQuote": true,
-    "quoteProps": "consistent",
-    "trailingComma": "es5"
   }
 }
