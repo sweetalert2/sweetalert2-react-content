@@ -300,7 +300,7 @@
 
 ### Bug Fixes
 
-* **package:** exclude eslint configuration from published package ([4fb31c8](https://github.com/sweetalert2/sweetalert2-react-content/commit/4fb31c8))
+* **package:** exclude slint configuration from published package ([4fb31c8](https://github.com/sweetalert2/sweetalert2-react-content/commit/4fb31c8))
 
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/sweetalert2/sweetalert2-react-content/compare/v0.2.3...v0.3.0) (2018-03-08)
