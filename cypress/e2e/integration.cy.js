@@ -103,7 +103,7 @@ context('SweetAlert2 React Content', () => {
     cy.wait(100).then(async () => {
       expect(MySwal.getTitle().innerHTML).to.eq('<span>title</span>')
       expect(MySwal.getHtmlContainer().innerHTML).to.eq('<span>html</span>')
-      expect(MySwal.getIcon().classList.contains('swal2-info')).to.be.true
+      expect(MySwal.getIcon().classList.contains('swal2-info')).to.equal(true)
       MySwal.clickConfirm()
       await swal
       done()
@@ -116,7 +116,7 @@ context('SweetAlert2 React Content', () => {
     cy.wait(100).then(async () => {
       expect(MySwal.getTitle().innerHTML).to.eq('my title')
       expect(MySwal.getHtmlContainer().innerHTML).to.eq('my html')
-      expect(MySwal.getIcon().classList.contains('swal2-error')).to.be.true
+      expect(MySwal.getIcon().classList.contains('swal2-error')).to.equal(true)
       MySwal.clickConfirm()
       await swal
       done()
@@ -137,7 +137,7 @@ context('SweetAlert2 React Content', () => {
       setTimeout(async () => {
         expect(MySwal.getTitle().innerHTML).to.eq('<span>new title</span>')
         expect(MySwal.getHtmlContainer().innerHTML).to.eq('<span>new html</span>')
-        expect(MySwal.getIcon().classList.contains('swal2-success')).to.be.true
+        expect(MySwal.getIcon().classList.contains('swal2-success')).to.equal(true)
         MySwal.clickConfirm()
         await swal
         done()
