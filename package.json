@@ -53,7 +53,7 @@
     "@types/react": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.0",
     "cypress": "^15.0.0",
-    "oxfmt": "^0.43.0",
+    "oxfmt": "^0.48.0",
     "oxlint": "^1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
